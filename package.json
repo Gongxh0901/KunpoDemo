@@ -1,0 +1,11 @@
+{
+  "name": "KunpoDemo",
+  "uuid": "aa369f30-6af1-467a-be82-e1cbb5822bd0",
+  "creator": {
+    "version": "3.8.5"
+  },
+  "dependencies": {
+    "fairygui-cc": "^1.2.2",
+    "kunpocc": "^1.0.13"
+  }
+}
