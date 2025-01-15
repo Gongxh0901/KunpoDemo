@@ -7,6 +7,7 @@ temp/
 local/
 build/
 profiles/
+extensions/
 native
 #//////////////////////////
 # NPM
@@ -25,3 +26,5 @@ node_modules/
 .idea/
 
 package-lock.json
+
+**/.DS_Store

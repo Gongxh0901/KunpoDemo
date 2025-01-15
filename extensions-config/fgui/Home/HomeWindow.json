@@ -1,0 +1,77 @@
+{
+    "props": {
+        "btn_header1": {
+            "name": "btn_header1",
+            "idPath": "n1_zmnj",
+            "namePath": "btn_header1"
+        },
+        "btn_header2": {
+            "name": "btn_header2",
+            "idPath": "n12_wx4p",
+            "namePath": "btn_header2"
+        },
+        "btn_empty": {
+            "name": "btn_empty",
+            "idPath": "n3_zmnj",
+            "namePath": "btn_empty"
+        },
+        "btn_closeone": {
+            "name": "btn_closeone",
+            "idPath": "n4_zmnj",
+            "namePath": "btn_closeone"
+        },
+        "btn_closeall": {
+            "name": "btn_closeall",
+            "idPath": "n5_zmnj",
+            "namePath": "btn_closeall"
+        },
+        "btn_hideone": {
+            "name": "btn_hideone",
+            "idPath": "n13_wx4p",
+            "namePath": "btn_hideone"
+        },
+        "btn_hideall": {
+            "name": "btn_hideall",
+            "idPath": "n14_wx4p",
+            "namePath": "btn_hideall"
+        }
+    },
+    "callbacks": {
+        "onClickBtnHeader1": {
+            "name": "btn_header1",
+            "idPath": "n1_zmnj",
+            "namePath": "btn_header1"
+        },
+        "onClickBtnHeader2": {
+            "name": "btn_header2",
+            "idPath": "n12_wx4p",
+            "namePath": "btn_header2"
+        },
+        "onClickBtnEmpty": {
+            "name": "btn_empty",
+            "idPath": "n3_zmnj",
+            "namePath": "btn_empty"
+        },
+        "onClickBtnCloseOne": {
+            "name": "btn_closeone",
+            "idPath": "n4_zmnj",
+            "namePath": "btn_closeone"
+        },
+        "onClickBtnCloseAll": {
+            "name": "btn_closeall",
+            "idPath": "n5_zmnj",
+            "namePath": "btn_closeall"
+        },
+        "onClickBtnHideOne": {
+            "name": "btn_hideone",
+            "idPath": "n13_wx4p",
+            "namePath": "btn_hideone"
+        },
+        "onClickBtnHideAll": {
+            "name": "btn_hideall",
+            "idPath": "n14_wx4p",
+            "namePath": "btn_hideall"
+        }
+    },
+    "__version__": "0.0.1"
+}
