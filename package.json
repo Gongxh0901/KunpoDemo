@@ -1,11 +1,12 @@
 {
-  "name": "kunpodemo",
-  "uuid": "aa369f30-6af1-467a-be82-e1cbb5822bd0",
+  "name": "kunpocreator",
+  "uuid": "f5d24040-9cd4-4a5a-8559-38bf55e621f7",
   "creator": {
     "version": "3.8.5"
   },
   "dependencies": {
     "fairygui-cc": "^1.2.2",
-    "kunpocc": "^1.0.13"
+    "kunpocc": "^1.0.13",
+    "ts-node": "^10.9.2"
   }
 }

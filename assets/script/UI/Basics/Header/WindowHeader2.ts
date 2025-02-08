@@ -4,10 +4,10 @@
  * @Description: 
  */
 
-import { fgui, kunpo } from "../../../header";
-const { uiclass, uiprop, uiclick, uiheader } = kunpo._uidecorator;
+import { fgui, kunpo } from '../../../header';
+const { uiheader, uiprop, uiclick } = kunpo._uidecorator;
 
-@uiheader("Basics")
+@uiheader("Basics", "WindowHeader2")
 export class WindowHeader2 extends kunpo.WindowHeader {
     @uiprop btn_close: fgui.GButton;
     protected onInit(): void {

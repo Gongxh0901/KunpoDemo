@@ -3,10 +3,10 @@
  * @Date: 2025-01-12
  * @Description: 
  */
-import { fgui, kunpo } from "../../../header";
-const { uiclass, uiprop, uiclick, uiheader } = kunpo._uidecorator;
+import { fgui, kunpo } from '../../../header';
+const { uiheader, uiprop, uiclick } = kunpo._uidecorator;
 
-@uiheader("Basics")
+@uiheader("Basics", "WindowHeader")
 export class WindowHeader extends kunpo.WindowHeader {
     @uiprop btn_close: fgui.GButton;
     protected onInit(): void {

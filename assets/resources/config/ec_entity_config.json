@@ -1,0 +1,57 @@
+{
+    "entity1": {
+        "Health": {
+            "animation": "",
+            "arr": [],
+            "arrobj": [],
+            "asset": "",
+            "audio": "",
+            "bool": false,
+            "color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "hp": 0,
+            "hpeunm": 3,
+            "jsonAsset": "",
+            "maxHp": 0,
+            "obj": {
+                "hp1": {
+                    "hp": 0,
+                    "max": 0
+                },
+                "hp2": {
+                    "hp": 0,
+                    "max": 0
+                }
+            },
+            "particle": "",
+            "prefab": "",
+            "size": {
+                "height": 0,
+                "width": 0
+            },
+            "skeleton": "",
+            "spriteFrame": "",
+            "string": "",
+            "testentity": "",
+            "testentityarray": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "vec2": {
+                "x": 0,
+                "y": 0
+            },
+            "vec3": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    }
+}

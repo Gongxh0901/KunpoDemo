@@ -18,7 +18,7 @@
         "_value": true
       },
       "skeletal-animation": {
-        "_value": false
+        "_value": true
       },
       "3d": {
         "_value": false
@@ -111,7 +111,7 @@
         "_value": false
       },
       "debug-renderer": {
-        "_value": false
+        "_value": true
       },
       "particle-2d": {
         "_value": true
@@ -129,7 +129,7 @@
         "_value": true
       },
       "websocket": {
-        "_value": false
+        "_value": true
       },
       "websocket-server": {
         "_value": false
@@ -141,7 +141,7 @@
         "_value": false
       },
       "tiled-map": {
-        "_value": true
+        "_value": false
       },
       "vendor-google": {
         "_value": false
@@ -155,13 +155,13 @@
         }
       },
       "dragon-bones": {
-        "_value": true
+        "_value": false
       },
       "marionette": {
         "_value": false
       },
       "procedural-animation": {
-        "_value": false
+        "_value": true
       },
       "custom-pipeline-post-process": {
         "_value": false
@@ -186,18 +186,20 @@
       "audio",
       "base",
       "custom-pipeline",
-      "dragon-bones",
+      "debug-renderer",
       "gfx-webgl",
       "gfx-webgl2",
       "intersection-2d",
       "particle-2d",
       "physics-2d-box2d",
+      "procedural-animation",
       "profiler",
+      "skeletal-animation",
       "spine",
-      "tiled-map",
       "tween",
       "ui",
       "video",
+      "websocket",
       "webview"
     ],
     "noDeprecatedFeatures": {

@@ -7,7 +7,7 @@
 import { fgui, kunpo } from "../header";
 const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
 
-@uiclass({ group: "Window", pkg: "Home" })
+@uiclass("Window", "Home", "HomeWindow")
 export class HomeWindow extends kunpo.Window {
     @uiprop private btn_header1: fgui.GButton;
     @uiprop private btn_header2: fgui.GButton;

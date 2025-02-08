@@ -7,7 +7,7 @@
 import { fgui, kunpo } from "../header";
 const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
 
-@uiclass({ group: "Window", pkg: "Home" })
+@uiclass("Window", "Home", "PopWindowHeader2")
 export class PopWindowHeader2 extends kunpo.Window {
     @uiprop btn_close: fgui.GButton;
     protected onInit(): void {
