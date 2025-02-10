@@ -4,5 +4,9 @@
     <component id="n0_qphy" name="container" src="qphyd" fileName="empty.xml" pkg="mkwn34a7" xy="375,667">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
+    <component id="n1_cmn3" name="btn _back" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="602,27">
+      <relation target="" sidePair="right-right,top-top"/>
+      <Button title="back"/>
+    </component>
   </displayList>
 </component>

@@ -5,6 +5,9 @@ const { ccclass, property, menu } = cc._decorator;
 @ccclass("GameEntry")
 @menu("kunpo/GameEntry")
 export class GameEntry extends kunpo.CocosEntry {
+    @property(cc.Node)
+    private root: cc.Node = null;
+
     public getConfig(): kunpo.FrameConfig {
         return {
             debug: true
@@ -45,6 +48,8 @@ export class GameEntry extends kunpo.CocosEntry {
         fgui.UIPackage.addPackage("ui/Basics");
         fgui.UIPackage.addPackage("ui/Home");
         fgui.UIPackage.addPackage("ui/Game");
+
+        this.root.active = false;
         kunpo.WindowManager.showWindow("HomeWindow", "这是一个测试窗口");
 
         kunpo.GlobalEvent.add("event::111", () => {

@@ -32,8 +32,9 @@
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="隐藏所有" titleFontSize="26"/>
     </component>
-    <text id="n15_wx4p" name="n15" xy="233,1058" size="284,74" fontSize="56" color="#ffffff" align="center" vAlign="middle" text="这是主界面">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </text>
+    <component id="n16_cmn3" name="btn_game" src="zmnjh" fileName="button/button1.xml" xy="215,1054" size="320,73">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button title="开始战斗" titleFontSize="26"/>
+    </component>
   </displayList>
 </component>

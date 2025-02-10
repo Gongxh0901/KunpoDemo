@@ -1210,6 +1210,9 @@
       "__expectedType__": "cc.JsonAsset"
     },
     "fps": 60,
+    "root": {
+      "__id__": 4
+    },
     "_id": "4dPt98muFPo7hLJwjnjK9U"
   },
   {

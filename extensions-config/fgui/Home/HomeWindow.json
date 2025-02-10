@@ -144,6 +144,11 @@
             "name": "btn_hideall",
             "idPath": "n14_wx4p",
             "namePath": "btn_hideall"
+        },
+        "btn_game": {
+            "name": "btn_game",
+            "idPath": "n16_cmn3",
+            "namePath": "btn_game"
         }
     },
     "callbacks": {
@@ -211,6 +216,11 @@
             "name": "btn_hideall",
             "idPath": "n14_wx4p",
             "namePath": "btn_hideall"
+        },
+        "onClickBtnGame": {
+            "name": "btn_game",
+            "idPath": "n16_cmn3",
+            "namePath": "btn_game"
         }
     },
     "__version__": "0.0.1"
