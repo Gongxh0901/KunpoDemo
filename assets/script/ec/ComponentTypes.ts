@@ -9,6 +9,10 @@ import { cc } from "../header";
 /** 数据组件类型 */
 enum DataComponentType {
     Health,
+    Transform,
+    RootNode,
+    /** 渲染组件 (多个) */
+    Render,
 }
 
 /** 逻辑组件类型 (组件更新数据从上到下) */

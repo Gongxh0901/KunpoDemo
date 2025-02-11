@@ -23,7 +23,7 @@
   "atlasSetting": {
     "maxSize": 2048,
     "paging": true,
-    "sizeOption": "pot",
+    "sizeOption": "npot",
     "forceSquare": false,
     "allowRotation": false,
     "trimImage": true

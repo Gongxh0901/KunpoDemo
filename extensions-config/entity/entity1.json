@@ -4,60 +4,22 @@
     "group": "",
     "components": [
         {
-            "name": "Health",
+            "name": "RenderTexture",
             "props": {
-                "testentity": "",
-                "hp": 0,
-                "maxHp": 0,
-                "string": "",
-                "testentityarray": [
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "bool": "false",
-                "hpeunm": "Current",
-                "spriteFrame": "",
-                "asset": "",
-                "prefab": "",
-                "skeleton": "",
-                "particle": "",
-                "animation": "",
-                "audio": "",
-                "jsonAsset": "",
-                "obj": {
-                    "hp1": {
-                        "hp": 0,
-                        "max": 0
-                    },
-                    "hp2": {
-                        "hp": 0,
-                        "max": 0
-                    }
-                },
-                "arr": [],
-                "arrobj": [],
-                "vec2": {
-                    "x": 0,
-                    "y": 0
-                },
-                "vec3": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
-                },
-                "color": [
-                    255,
-                    255,
-                    255,
-                    255
-                ],
-                "size": {
-                    "width": 0,
-                    "height": 0
-                }
+                "uuid": "5836c379-d558-423f-a309-f822efcb834d@f9941"
             }
+        },
+        {
+            "name": "Move",
+            "props": {}
+        },
+        {
+            "name": "RootNode",
+            "props": {}
+        },
+        {
+            "name": "Transform",
+            "props": {}
         }
     ]
 }

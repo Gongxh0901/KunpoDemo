@@ -103,10 +103,6 @@ export class Health extends kunpo.Component {
     @ecprop({ type: "size", displayName: "尺寸" })
     private size: cc.Size;
 
-    public parse(data: any): void {
-
-    }
-
     protected onEnter(): void {
 
     }

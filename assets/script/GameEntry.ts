@@ -1,4 +1,3 @@
-import { AssetLoader } from './AssetHelper';
 import { Debug } from './Debug';
 import { cc, fgui, kunpo } from './header';
 const { ccclass, property, menu } = cc._decorator;
@@ -27,20 +26,27 @@ export class GameEntry extends kunpo.CocosEntry {
     }
 
     private loadResources(): void {
-        let paths = [
+        let paths: kunpo.IAssetConfig[] = [
             { path: "ui", type: cc.Asset },
+            { path: "icon", type: cc.SpriteFrame },
+            { path: "prefab", type: cc.Prefab },
+            { path: "texture/6101/spriteFrame", type: cc.SpriteFrame, isFile: true },
+
+            { path: "pet", type: cc.SpriteFrame, bundle: "bundle_res" },
         ];
-        let loader = new AssetLoader();
-        loader.setLoadItems(paths);
-        loader.setCallbacks(
-            (percent: number) => {
+        let loader = new kunpo.AssetLoader("load");
+        loader.start({
+            configs: paths,
+            complete: () => {
+                this.loadComplete();
+            },
+            fail: (msg: string, err: Error) => {
 
             },
-            () => {
-                this.loadComplete();
+            progress: (percent: number) => {
+
             }
-        );
-        loader.start();
+        });
     }
 
 
@@ -55,5 +61,7 @@ export class GameEntry extends kunpo.CocosEntry {
         kunpo.GlobalEvent.add("event::111", () => {
             kunpo.log("接收到事件");
         }, this);
+
+        kunpo.AssetPool.releaseDir("pet", "bundle_res", cc.SpriteFrame);
     }
 }
