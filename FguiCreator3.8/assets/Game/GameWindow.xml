@@ -8,5 +8,9 @@
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="back"/>
     </component>
+    <component id="n2_y5yg" name="btn _add" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="253,1232" size="244,73">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button title="创建实体"/>
+    </component>
   </displayList>
 </component>

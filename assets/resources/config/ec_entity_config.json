@@ -1,10 +1,17 @@
 {
     "entity1": {
-        "Move": {},
-        "RenderTexture": {
-            "uuid": "5836c379-d558-423f-a309-f822efcb834d@f9941"
+        "LimitMove": {
+            "radius": 30
+        },
+        "Move": {
+            "_speed": 120
+        },
+        "PositionUpdateSystem": {},
+        "RenderPrefab": {
+            "uuid": "56dc9bdf-19c7-4319-8c27-628ea6424696"
         },
         "RootNode": {},
+        "ScreenRebound": {},
         "Transform": {}
     }
 }

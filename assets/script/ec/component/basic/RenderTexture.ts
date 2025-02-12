@@ -33,5 +33,6 @@ export class RenderTexture extends kunpo.Component {
 
     protected onRemove(): void {
         // 组件删除时 把node回收  自行实现
+        this._node.destroy();
     }
 }

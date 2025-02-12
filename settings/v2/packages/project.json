@@ -5,7 +5,8 @@
       "height": 1334,
       "width": 750,
       "fitHeight": true
-    }
+    },
+    "highQuality": false
   },
   "custom_joint_texture_layouts": []
 }

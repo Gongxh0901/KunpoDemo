@@ -4,22 +4,38 @@
     "group": "",
     "components": [
         {
-            "name": "RenderTexture",
-            "props": {
-                "uuid": "5836c379-d558-423f-a309-f822efcb834d@f9941"
-            }
-        },
-        {
-            "name": "Move",
-            "props": {}
-        },
-        {
             "name": "RootNode",
             "props": {}
         },
         {
             "name": "Transform",
             "props": {}
+        },
+        {
+            "name": "Move",
+            "props": {
+                "_speed": 120
+            }
+        },
+        {
+            "name": "LimitMove",
+            "props": {
+                "radius": 30
+            }
+        },
+        {
+            "name": "PositionUpdateSystem",
+            "props": {}
+        },
+        {
+            "name": "ScreenRebound",
+            "props": {}
+        },
+        {
+            "name": "RenderPrefab",
+            "props": {
+                "uuid": "56dc9bdf-19c7-4319-8c27-628ea6424696"
+            }
         }
     ]
 }

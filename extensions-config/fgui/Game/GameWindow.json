@@ -16,6 +16,11 @@
             "name": "btn _back",
             "idPath": "n1_cmn3",
             "namePath": "btn _back"
+        },
+        "onCreateEntity": {
+            "name": "btn _add",
+            "idPath": "n2_y5yg",
+            "namePath": "btn _add"
         }
     },
     "__version__": "0.0.1"
