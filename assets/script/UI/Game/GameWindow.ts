@@ -4,8 +4,8 @@
  * @Description: 战斗界面
  */
 
-import { ECManager, log } from "kunpocc";
-import { SystemComponentType } from "../../ec/ComponentTypes";
+import { ECManager } from "kunpocc";
+import { componentUpdateOrderList } from "../../ec/ComponentTypes";
 import { cc, fgui, kunpo } from "../../header";
 const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
 
@@ -21,21 +21,24 @@ export class GameWindow extends kunpo.Window {
 
     protected onShow() {
         console.log("GameWindow onShow");
+        /** 创建一个ec世界的节点 */
         let node = new cc.Node();
         this.container.node.addChild(node);
 
-        // let sprite = node.addComponent(cc.Sprite);
-        // sprite.spriteFrame = kunpo.AssetPool.get<cc.SpriteFrame>("icon/icon/spriteFrame");
-
-        let list = cc.Enum.getList(SystemComponentType);
-        // 取出list中每一项的value
-        let values = list.map(item => item.value);
-        log("需要更新的组件", values);
-        ECManager.createECWorld("world", node, values, 100, 10);
-        ECManager.createEntity("world", "entity1");
+        /** 
+         * 创建一个ec世界 
+         * 参数1: 世界名称
+         * 参数2: 世界节点
+         * 参数3: 组件更新顺序列表
+         * 参数4: 实体池的最大缓存数量，多余的不会被缓存，根据需要调整
+         * 参数5: 预创建的实体数量，根据需要调整
+         */
+        kunpo.log("需要更新的组件", componentUpdateOrderList);
+        ECManager.createECWorld("world", node, componentUpdateOrderList, 100, 10);
     }
 
     protected onClose() {
+        /** 退出游戏时 销毁ec世界 */
         ECManager.destroyECWorld("world");
     }
 
@@ -46,10 +49,12 @@ export class GameWindow extends kunpo.Window {
 
     @uiclick
     private onCreateEntity(): void {
+        /** 创建一个实体 */
         ECManager.createEntity("world", "entity1");
     }
 
     protected onUpdate(dt: number): void {
+        /** 更新ec世界 */
         ECManager.getECWorld("world").update(dt);
     }
 }

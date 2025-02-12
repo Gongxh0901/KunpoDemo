@@ -32,8 +32,4 @@ export const ComponentType = {
 export type ComponentType = DataComponentType | SystemComponentType;
 
 /** 自定义组件更新顺序列表 */
-export const componentUpdateOrderList = [];
-let list = cc.Enum["getList"](cc.Enum(SystemComponentType));
-for (const { name } of list) {
-    componentUpdateOrderList.push(name);
-}
+export const componentUpdateOrderList = cc.Enum.getList(cc.Enum(SystemComponentType)).map(item => item.value).sort((a, b) => a - b);

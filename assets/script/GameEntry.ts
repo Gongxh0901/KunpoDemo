@@ -60,7 +60,5 @@ export class GameEntry extends kunpo.CocosEntry {
         kunpo.GlobalEvent.add("event::111", () => {
             kunpo.log("接收到事件");
         }, this);
-
-        kunpo.AssetPool.releaseDir("pet", "bundle_res", cc.SpriteFrame);
     }
 }
