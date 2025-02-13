@@ -38,6 +38,9 @@
   - 实体组件系统
   - 组件池优化
   - 实体管理器
+- **资源管理**
+  * 资源加载
+  * 资源池
 
 ##  安装kunpocc
 
@@ -78,17 +81,17 @@ npm install kunpocc
 
 ## 使用方法
 
-### UI 系统使用
+### 一、UI 系统使用
 
-注：UI制作需要使用 FairyGUI，[FairyGUI官方文档](https://www.fairygui.com/docs/editor)
+> 注：UI制作需要使用 FairyGUI，[FairyGUI官方文档](https://www.fairygui.com/docs/editor)
 
-![image-20250213105921142](https://gitee.com/gongxinhai/public-image/raw/master/image-20250213105921142.png)
+> ![image-20250213105921142](https://gitee.com/gongxinhai/public-image/raw/master/image-20250213105921142.png)
 
-#### UI 装饰器使用
+#### *UI 装饰器使用*
 
-注：只有使用了装饰器的内容才能在 `kunpo-fgui` 插件中识别，`kunpo-fgui`插件操作界面如下图
+> 注：只有使用了装饰器的内容才能在 `kunpo-fgui` 插件中识别，`kunpo-fgui`插件操作界面如下图
 
-![image-20250213110353385](https://gitee.com/gongxinhai/public-image/raw/master/image-20250213110353385.png)
+> ![image-20250213110353385](https://gitee.com/gongxinhai/public-image/raw/master/image-20250213110353385.png)
 
 
 
@@ -176,7 +179,7 @@ npm install kunpocc
    ```
    
 
-#### 创建窗口
+#### *创建窗口*
 
 1. 创建窗口类
 
@@ -234,7 +237,9 @@ npm install kunpocc
 - `onRecover`: 窗口恢复时调用
 - `onEmptyAreaClick`: 点击窗口空白区域时调用
 
-### 全局事件系统
+
+
+### 二、 全局事件系统
 
 ```typescript
 import { GlobalEvent } from 'kunpocc';
@@ -267,7 +272,7 @@ GlobalEvent.removeByNameAndTarget('eventName', this);
 
 
 
-### 全局计时器
+### 三、全局计时器
 
 ```typescript
 import { GlobalTimer } from 'kunpocc';
@@ -300,9 +305,9 @@ GlobalTimer.stopTimer(timerId3);
   - 正整数 n：执行 n 次
   - -1：无限循环
 
-### 网络模块
+### 四、 网络模块
 
-#### HTTP 请求
+#### *HTTP 请求*
 
 ```typescript
 import { HttpManager, IHttpEvent, HttpResponseType } from 'kunpocc';
@@ -349,13 +354,13 @@ GlobalEvent.add(HttpManager.HttpEvent, (result, response) => {
 HttpManager.post("https://api.example.com/data", { /* data */ });
 ```
 
-#### 请求方法
+#### *请求方法*
 - `post(url, data, responseType?, event?, headers?, timeout?)`
 - `get(url, data, responseType?, event?, headers?, timeout?)`
 - `put(url, data, responseType?, event?, headers?, timeout?)`
 - `head(url, data, responseType?, event?, headers?, timeout?)`
 
-#### 参数说明
+#### *参数说明*
 - `url`: 请求地址
 - `data`: 请求数据
 - `responseType`: 响应类型（可选，默认 'json'）
@@ -366,7 +371,7 @@ HttpManager.post("https://api.example.com/data", { /* data */ });
 - `headers`: 请求头（可选）
 - `timeout`: 超时时间，单位秒（可选，0表示不超时）
 
-#### 响应处理
+#### *响应处理*
 1. 回调方式（通过 IHttpEvent）：
 ```typescript
 const event: IHttpEvent = {
@@ -389,11 +394,11 @@ GlobalEvent.add(HttpManager.HttpEvent, (result, response) => {
 }, this);
 ```
 
-### 行为树系统
+### 五、行为树系统
 
-行为树是一个强大的 AI 决策系统，用于实现复杂的游戏 AI 行为。
+> 行为树是一个强大的 AI 决策系统，用于实现复杂的游戏 AI 行为。
 
-#### 基本概念
+#### *基本概念*
 
 1. 节点状态
 ```typescript
@@ -410,7 +415,7 @@ enum Status {
 - **条件节点 (Condition)**：判断条件的节点
 - **装饰节点 (Decorator)**：修饰其他节点行为的节点
 
-#### 使用示例
+#### *使用示例*
 
 ```typescript
 import { 
@@ -448,7 +453,7 @@ const blackboard = new Blackboard();  // 共享数据黑板
 tree.tick(agent, blackboard);
 ```
 
-#### 常用节点
+#### *常用节点*
 
 1. 组合节点
 
@@ -513,29 +518,29 @@ tree.tick(agent, blackboard);
    ```
 
    
-#### 注意事项
+#### *注意事项*
 
 1. 节点状态说明：
    - `SUCCESS`：节点执行成功
    - `FAILURE`：节点执行失败
    - `RUNNING`：节点正在执行中
-
 2. 组合节点特性：
    - `Sequence`：所有子节点返回 SUCCESS 才返回 SUCCESS
    - `Selector`：任一子节点返回 SUCCESS 就返回 SUCCESS
    - `Parallel`：并行执行所有子节点
    - `MemSequence/MemSelector`：会记住上次执行位置
-
 3. 性能优化：
    - 使用黑板共享数据，避免重复计算
    - 合理使用记忆节点，减少重复执行
    - 控制行为树的深度，避免过于复杂
 
-### 平台相关
 
-Platform 类提供了游戏运行平台的相关信息和判断方法。
 
-#### 平台类型
+### 六、平台相关
+
+> Platform 类提供了游戏运行平台的相关信息和判断方法。
+
+#### *平台类型*
 
 ```typescript
 import { Platform, PlatformType } from 'kunpocc';
@@ -556,7 +561,7 @@ enum PlatformType {
 const currentPlatform = Platform.platform;
 ```
 
-#### 平台判断
+#### *平台判断*
 
 ```typescript
 import { Platform } from 'kunpocc';
@@ -612,7 +617,7 @@ if (Platform.isBrowser) {
 }
 ```
 
-#### 使用示例
+#### *使用示例*
 
 ```typescript
 import { Platform, PlatformType } from 'kunpocc';
@@ -648,11 +653,11 @@ if (Platform.isNativeMobile) {
 }
 ```
 
-### 四叉树碰撞检测
+### 七、四叉树碰撞检测
 
-四叉树是一种用于高效进行空间划分和碰撞检测的数据结构。
+> 四叉树是一种用于高效进行空间划分和碰撞检测的数据结构。
 
-#### 基本概念
+#### *基本概念*
 
 1. 形状类型
 
@@ -681,7 +686,7 @@ if (Platform.isNativeMobile) {
    ```
 
    
-#### 使用示例
+#### *使用示例*
 
 1. 创建和初始化
 
@@ -737,7 +742,7 @@ if (Platform.isNativeMobile) {
    ```
 
    
-#### 形状操作
+#### *形状操作*
 
 1. 位置和缩放
 
@@ -766,7 +771,7 @@ if (Platform.isNativeMobile) {
    ```
 
    
-#### 性能优化建议
+#### *性能优化建议*
 
 1. 合理设置配置参数：
    - `MAX_SHAPES`：较小的值会导致更频繁的分裂，较大的值会降低查询效率
@@ -782,9 +787,9 @@ if (Platform.isNativeMobile) {
    - 对于静态物体，可以使用单独的四叉树
    - 动态物体频繁更新时，考虑使用更大的边界范围
 
-### 工具类
+### 八、工具类
 
-#### 数学工具 (MathTool)
+#### *数学工具 (MathTool)*
 
 ```typescript
 import { MathTool } from 'kunpocc';
@@ -818,8 +823,6 @@ const smoothValue = MathTool.smooth(
     0.3   // 响应时间（秒）
 );  // 返回一个平滑过渡的中间值
 ```
-
-
 
 使用说明：
 
@@ -855,7 +858,7 @@ const smoothValue = MathTool.smooth(
    - responseTime: 响应时间（秒）
    - 常用于实现平滑的相机移动、UI动画等
 
-#### MD5 加密
+#### *MD5 加密*
 
 ```typescript
 import { md5 } from 'kunpocc';
@@ -874,21 +877,21 @@ try {
 }
 ```
 
-### 实体组件系统（EC）
+### 九、实体组件系统（EC）
 
 * 不使用creator官方的挂载脚本的方式，是因为他的效率太低了
 
 * 实体组件系统是一种用于游戏开发的架构模式，它将游戏对象（实体）的数据（组件）和行为分离。
 
-#### creator插件`kunpo-ec`
+#### *creator插件`kunpo-ec`*
 
-`kunpo-cc`可以方便创建、配置、导出实体，操作界面如下图：
+> `kunpo-cc`可以方便创建、配置、导出实体，操作界面如下图：
 
 ![image-20250213111622050](https://gitee.com/gongxinhai/public-image/raw/master/image-20250213111622050.png)
 
 
 
-#### 重点接口说明
+#### *重点接口说明*
 
 注：详细说明查看声明文件 `kunpocc.d.ts`
 
@@ -1163,7 +1166,7 @@ try {
 
    
 
-#### 使用
+#### *使用*
 
 1. 组件类型声明
 
@@ -1404,7 +1407,70 @@ try {
    }
    ```
 
-   
+
+
+### 十、资源加载工具
+
+#### *资源加载器*
+
+> 注意：资源就算加载多次和一次效果一样
+
+```typescript
+interface IAssetConfig {
+    /** 资源类型 */
+    type: typeof Asset;
+    /** 资源路径 */
+    path: string;
+    /** 是否是单个文件 默认是文件夹 */
+    isFile?: boolean;
+    /** 资源包名 默认 resources */
+    bundle?: string;
+}
+
+/**
+ * 开始加载资源
+ * @param {IAssetConfig[]} res.configs 资源配置
+ * @param {number} res.parallel 并行加载数量 默认 10
+ * @param {number} res.retry 失败重试次数 默认 3
+ * @param {Function} res.complete 加载完成回调
+ * @param {Function} res.progress 加载进度回调
+ * @param {Function} res.fail 加载失败回调
+ */
+public start(res: { configs: IAssetConfig[], parallel?: number, retry?: number, complete: () => void, fail: (msg: string, err: Error) => void, progress?: (percent: number) => void }): void
+
+/** 重试 重新加载失败的资源 */
+public retry(): void
+```
+
+#### *资源池*
+
+```typescript
+/** 资源是否已加载 */
+public static has(path: string, bundlename: string = "resources"): boolean
+
+/** 获取资源 */
+public static get<T extends Asset>(path: string, bundlename: string = "resources"): T
+
+/** 按 uuid 判断资源是否已加载 */
+public static hasUUID(uuid: string): boolean
+
+/** 按 uuid 获取资源 */
+public static getByUUID<T extends Asset>(uuid: string): T
+
+/** 按资源路径释放资源 */
+public static releasePath(path: string, bundlename: string = "resources"): void
+
+/** 按 bundle 和 文件夹释放资源 */
+public static async releaseDir(dir: string, bundlename: string = "resources", asset: typeof Asset): Promise<void>
+
+/** 按 uuid 释放资源 */
+public static releaseUUID(uuid: string): void
+
+/** 释放所有加载的资源 */
+public static releaseAll(): void
+```
+
+
 
 ## 类型支持
 
