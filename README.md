@@ -1490,4 +1490,5 @@ gongxh
 
 ## 仓库
 
-[demo 仓库地址](https://github.com/Gongxh0901/KunpoDemo)
+[github demo地址](https://github.com/Gongxh0901/KunpoDemo)
+[gitee demo地址](https://gitee.com/gongxinhai/kunpo-demo)
