@@ -221,6 +221,11 @@
             "name": "btn_game",
             "idPath": "n16_cmn3",
             "namePath": "btn_game"
+        },
+        "onClickBtnCondition": {
+            "name": "btn_condition",
+            "idPath": "n17_eiv0",
+            "namePath": "btn_condition"
         }
     },
     "__version__": "0.0.1"

@@ -18,6 +18,9 @@
     <component id="hg37o" name="CustomComponents.xml" path="/"/>
     <component id="wx4pp" name="PopWindowHeader2.xml" path="/" exported="true"/>
     <component id="wx4pq" name="PopWindow.xml" path="/" exported="true"/>
+    <component id="eiv0r" name="ConditionWindow.xml" path="/" exported="true"/>
+    <image id="eiv0s" name="image_reddot_bg.png" path="/image/"/>
+    <component id="eiv0t" name="item_reddot.xml" path="/image/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

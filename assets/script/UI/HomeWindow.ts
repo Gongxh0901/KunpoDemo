@@ -91,6 +91,11 @@ export class HomeWindow extends kunpo.Window {
         kunpo.WindowManager.showWindow("GameWindow");
     }
 
+    @uiclick
+    private onClickBtnCondition(): void {
+        kunpo.WindowManager.showWindow("ConditionWindow");
+    }
+
     public getHeaderInfo(): kunpo.WindowHeaderInfo {
         return kunpo.WindowHeaderInfo.create("WindowHeader", "aaa");
     }
