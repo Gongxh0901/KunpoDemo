@@ -26,7 +26,7 @@
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 37
+      "__id__": 39
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -57,7 +57,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 38
+      "__id__": 40
     },
     "_id": "bef93422-3e63-4c0f-a5cf-d926e7360673"
   },
@@ -973,13 +973,13 @@
         "__id__": 28
       },
       {
-        "__id__": 34
+        "__id__": 36
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 36
+        "__id__": 38
       }
     ],
     "_prefab": null,
@@ -1026,12 +1026,15 @@
       },
       {
         "__id__": 31
+      },
+      {
+        "__id__": 33
       }
     ],
     "_active": true,
     "_components": [
       {
-        "__id__": 33
+        "__id__": 35
       }
     ],
     "_prefab": null,
@@ -1185,6 +1188,66 @@
     "_id": "8esjOPtvxOoae45nWAx2v4"
   },
   {
+    "__type__": "cc.Node",
+    "_name": "Wait",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "_parent": {
+      "__id__": 28
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 34
+      }
+    ],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_mobility": 0,
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "83puExzHVKPIbdYwrq1FoY"
+  },
+  {
+    "__type__": "CocosWindowContainer",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 33
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "ignoreQuery": true,
+    "swallowTouch": true,
+    "bgAlpha": 0,
+    "_id": "50qi/ehLlPG5oiVdlzl7So"
+  },
+  {
     "__type__": "CocosUIModule",
     "_name": "",
     "_objFlags": 0,
@@ -1208,7 +1271,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 35
+        "__id__": 37
       }
     ],
     "_prefab": null,
@@ -1247,7 +1310,7 @@
     "_objFlags": 0,
     "__editorExtras__": {},
     "node": {
-      "__id__": 34
+      "__id__": 36
     },
     "_enabled": true,
     "__prefab": null,
@@ -1289,25 +1352,25 @@
   {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 39
-    },
-    "shadows": {
-      "__id__": 40
-    },
-    "_skybox": {
       "__id__": 41
     },
-    "fog": {
+    "shadows": {
       "__id__": 42
     },
-    "octree": {
+    "_skybox": {
       "__id__": 43
     },
-    "skin": {
+    "fog": {
       "__id__": 44
     },
-    "lightProbeInfo": {
+    "octree": {
       "__id__": 45
+    },
+    "skin": {
+      "__id__": 46
+    },
+    "lightProbeInfo": {
+      "__id__": 47
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false
