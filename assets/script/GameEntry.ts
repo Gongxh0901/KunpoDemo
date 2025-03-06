@@ -31,6 +31,7 @@ export class GameEntry extends kunpo.CocosEntry {
         let paths: kunpo.IAssetConfig[] = [
             { path: "ui/manual", type: cc.Asset }, // 手动加载UI基础资源
             { path: "prefab", type: cc.Prefab },
+            { path: "config/buffer", type: cc.BufferAsset },
             // { path: "icon", type: cc.SpriteFrame },
             // { path: "texture/6101/spriteFrame", type: cc.SpriteFrame, isFile: true },
             // { path: "pet", type: cc.SpriteFrame, bundle: "bundle_res" },

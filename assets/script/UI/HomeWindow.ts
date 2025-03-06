@@ -4,7 +4,7 @@
  * @Description: 
  */
 
-import { fgui, kunpo } from "../header";
+import { cc, fgui, kunpo } from "../header";
 const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
 
 @uiclass("Window", "Home", "HomeWindow")
@@ -94,6 +94,44 @@ export class HomeWindow extends kunpo.Window {
     @uiclick
     private onClickBtnCondition(): void {
         kunpo.WindowManager.showWindow("ConditionWindow");
+    }
+
+    @uiclick
+    private onClickLoadBuffer(): void {
+        let paths: kunpo.IAssetConfig[] = [
+            { path: "config/buffer", type: cc.BufferAsset },
+        ];
+        let loader = new kunpo.AssetLoader("load");
+        loader.start({
+            configs: paths,
+            complete: () => {
+                kunpo.log("加载成功");
+
+                let basic = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/basic");
+                kunpo.log("basic", JSON.stringify(kunpo.Binary.toJson(basic.buffer())));
+
+                let dict = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/dict");
+                kunpo.log("dict", JSON.stringify(kunpo.Binary.toJson(dict.buffer())));
+
+                let listDict = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/list_dict");
+                kunpo.log("list_dict", JSON.stringify(kunpo.Binary.toJson(listDict.buffer())));
+
+                let aaa = {
+                    a: 1,
+                    b: 2,
+                    c: 3,
+                    d: 4,
+                    e: 5,
+                };
+                kunpo.log("aaa", JSON.stringify(kunpo.Binary.toJson(aaa)));
+            },
+            fail: (msg: string, err: Error) => {
+                kunpo.log("加载失败", msg, err);
+            },
+            progress: (percent: number) => {
+
+            }
+        });
     }
 
     public getHeaderInfo(): kunpo.WindowHeaderInfo {

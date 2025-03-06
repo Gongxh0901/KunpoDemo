@@ -226,6 +226,11 @@
             "name": "btn_condition",
             "idPath": "n17_eiv0",
             "namePath": "btn_condition"
+        },
+        "onClickLoadBuffer": {
+            "name": "btn_config",
+            "idPath": "n18_pldv",
+            "namePath": "btn_config"
         }
     },
     "__version__": "0.0.1"
