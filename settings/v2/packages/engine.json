@@ -5,14 +5,14 @@
       "base": {
         "_value": true
       },
+      "graphcis": {
+        "_value": true
+      },
       "gfx-webgl": {
         "_value": true
       },
       "gfx-webgl2": {
         "_value": true
-      },
-      "gfx-webgpu": {
-        "_value": false
       },
       "animation": {
         "_value": true
@@ -21,9 +21,6 @@
         "_value": true
       },
       "3d": {
-        "_value": false
-      },
-      "meshopt": {
         "_value": false
       },
       "2d": {
@@ -73,7 +70,7 @@
         "_value": false
       },
       "physics-2d": {
-        "_value": true,
+        "_value": false,
         "_option": "physics-2d-box2d",
         "_flags": {
           "physics-2d-box2d-wasm": {
@@ -83,14 +80,6 @@
       },
       "physics-2d-box2d": {
         "_value": false
-      },
-      "physics-2d-box2d-wasm": {
-        "_value": false,
-        "_flags": {
-          "physics-2d-box2d-wasm": {
-            "LOAD_BOX2D_MANUALLY": false
-          }
-        }
       },
       "physics-2d-builtin": {
         "_value": false
@@ -111,7 +100,7 @@
         "_value": false
       },
       "debug-renderer": {
-        "_value": true
+        "_value": false
       },
       "particle-2d": {
         "_value": true
@@ -143,9 +132,6 @@
       "tiled-map": {
         "_value": false
       },
-      "vendor-google": {
-        "_value": false
-      },
       "spine": {
         "_value": true,
         "_flags": {
@@ -163,15 +149,32 @@
       "procedural-animation": {
         "_value": true
       },
+      "custom-pipeline": {
+        "_value": false
+      },
+      "gfx-webgpu": {
+        "_value": false
+      },
+      "meshopt": {
+        "_value": false
+      },
+      "physics-2d-box2d-wasm": {
+        "_value": false,
+        "_flags": {
+          "physics-2d-box2d-wasm": {
+            "LOAD_BOX2D_MANUALLY": false
+          }
+        }
+      },
+      "vendor-google": {
+        "_value": false
+      },
       "custom-pipeline-post-process": {
         "_value": false
       },
       "render-pipeline": {
         "_value": true,
         "_option": "custom-pipeline"
-      },
-      "custom-pipeline": {
-        "_value": true
       },
       "legacy-pipeline": {
         "_value": false
@@ -185,13 +188,10 @@
       "animation",
       "audio",
       "base",
-      "custom-pipeline",
-      "debug-renderer",
       "gfx-webgl",
       "gfx-webgl2",
       "intersection-2d",
       "particle-2d",
-      "physics-2d-box2d",
       "procedural-animation",
       "profiler",
       "skeletal-animation",

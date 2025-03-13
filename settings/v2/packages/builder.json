@@ -22,25 +22,25 @@
           },
           "miniGame": {
             "fallbackOptions": {
-              "isRemote": false,
+              "isRemote": true,
               "compressionType": "merge_all_json"
             },
             "configMode": "fallback",
             "overwriteSettings": {
               "alipay-mini-game": {
-                "isRemote": false,
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               },
               "bytedance-mini-game": {
-                "isRemote": false,
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               },
               "fb-instant-games": {
-                "isRemote": false,
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               },
               "huawei-quick-game": {
-                "isRemote": false,
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               },
               "migu-mini-game": {
@@ -48,23 +48,27 @@
                 "compressionType": "merge_all_json"
               },
               "oppo-mini-game": {
-                "isRemote": false,
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               },
               "taobao-mini-game": {
-                "isRemote": false,
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               },
               "vivo-mini-game": {
-                "isRemote": false,
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               },
               "wechatgame": {
-                "isRemote": false,
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               },
               "xiaomi-quick-game": {
-                "isRemote": false,
+                "isRemote": true,
+                "compressionType": "merge_all_json"
+              },
+              "taobao-creative-app": {
+                "isRemote": true,
                 "compressionType": "merge_all_json"
               }
             }

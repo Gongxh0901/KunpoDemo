@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "GameEntry",
+    "_name": "NativeGameEntry",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_native": "",
@@ -11,7 +11,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "GameEntry",
+    "_name": "NativeGameEntry",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -59,7 +59,7 @@
     "_globals": {
       "__id__": 40
     },
-    "_id": "bef93422-3e63-4c0f-a5cf-d926e7360673"
+    "_id": "f75274b3-ee34-4805-a3bb-44d0c4617d01"
   },
   {
     "__type__": "cc.Node",
@@ -1339,7 +1339,10 @@
     "root": {
       "__id__": 4
     },
-    "manifest": null,
+    "manifest": {
+      "__uuid__": "61f59735-b08e-4496-9ad8-0731b9d684ca",
+      "__expectedType__": "cc.Asset"
+    },
     "_id": "4dPt98muFPo7hLJwjnjK9U"
   },
   {

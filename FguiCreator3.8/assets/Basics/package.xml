@@ -17,6 +17,9 @@
     <component id="qphyd" name="empty.xml" path="/" exported="true"/>
     <component id="ebfme" name="LoadUIWindow.xml" path="/load_window/" exported="true"/>
     <image id="ebfmf" name="image_net_wait.png" path="/load_window/"/>
+    <component id="ukhnh" name="AlertWindow.xml" path="/window/" exported="true"/>
+    <component id="ukhni" name="btn_close.xml" path="/btns/" exported="true"/>
+    <image id="ukhnj" name="image_button_close.png" path="/btns/"/>
   </resources>
   <publish name="" path="/Users/gongxh/work/kunpo-lib/KunpoDemo/assets/resources/ui/manual" packageCount="2"/>
 </packageDescription>

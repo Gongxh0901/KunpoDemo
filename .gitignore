@@ -8,6 +8,7 @@ local/
 build/
 profiles/
 extensions/
+publish/
 native
 #//////////////////////////
 # NPM
