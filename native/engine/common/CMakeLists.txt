@@ -52,4 +52,11 @@ include(${COCOS_X_PATH}/CMakeLists.txt)
 list(APPEND CC_COMMON_SOURCES
     ${CMAKE_CURRENT_LIST_DIR}/Classes/Game.h
     ${CMAKE_CURRENT_LIST_DIR}/Classes/Game.cpp
+
+    ############### 添加生成的绑定类 ##############
+    ${CMAKE_CURRENT_LIST_DIR}/Classes/SDKHelper.h
+    ${CMAKE_CURRENT_LIST_DIR}/Classes/SDKHelper.cpp
+
+    ${CMAKE_CURRENT_LIST_DIR}/Classes/bindings/auto/jsb_SDKHelper_auto.h
+    ${CMAKE_CURRENT_LIST_DIR}/Classes/bindings/auto/jsb_SDKHelper_auto.cpp
 )

@@ -24,7 +24,7 @@
  THE SOFTWARE.
  ****************************************************************************/
 #include "Game.h"
-
+#include "bindings/auto/jsb_SDKHelper_auto.h"  // 添加新生成的绑定类头文件
 #ifndef GAME_NAME
 #define GAME_NAME "CocosGame";
 #endif
@@ -51,7 +51,7 @@ int Game::init() {
   _debuggerInfo.pauseOnStart = false;
 
   _xxteaKey = SCRIPT_XXTEAKEY;
-
+  se::ScriptEngine::getInstance()->addRegisterCallback(register_all_SDKHelper);  // 注册
   BaseGame::init();
   return 0;
 }
