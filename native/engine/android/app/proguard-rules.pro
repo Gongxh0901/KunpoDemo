@@ -24,6 +24,9 @@
 -keep class org.apache.http.** { *; }
 -dontwarn org.apache.http.**
 
+-keep public class com.kunpo.** { *; }
+-dontwarn com.kunpo.**
+
 # Proguard okhttp for release
 -keep class okhttp3.** { *; }
 -dontwarn okhttp3.**

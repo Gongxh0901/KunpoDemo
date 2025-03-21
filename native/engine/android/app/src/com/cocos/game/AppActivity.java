@@ -27,9 +27,11 @@ package com.cocos.game;
 import android.os.Bundle;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.view.WindowManager;
 
 import com.cocos.service.SDKWrapper;
 import com.cocos.lib.CocosActivity;
+import com.kunpo.KunpoHelper;
 
 public class AppActivity extends CocosActivity {
 
@@ -38,7 +40,9 @@ public class AppActivity extends CocosActivity {
         super.onCreate(savedInstanceState);
         // DO OTHER INITIALIZATION BELOW
         SDKWrapper.shared().init(this);
-
+        KunpoHelper.setActivity(this);
+        // 保持屏幕常亮
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     @Override

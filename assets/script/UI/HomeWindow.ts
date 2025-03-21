@@ -88,16 +88,8 @@ export class HomeWindow extends kunpo.Window {
 
     @uiclick
     private onClickBtnGame(): void {
-        kunpo.log("获取版本号和build号");
-
-        kunpo.log("获取版本号和build号1", JSON.stringify(KunpoSDK));
-        kunpo.log("获取版本号和build号2", JSON.stringify(KunpoSDK.SDKHelper));
-        kunpo.log("获取版本号和build号3", JSON.stringify(KunpoSDK.SDKHelper.getInstance()));
-
-
-        kunpo.log("获取版本号和build号4", KunpoSDK.SDKHelper.getInstance().getVersionCode());
-        kunpo.log("获取版本号和build号5", KunpoSDK.SDKHelper.getInstance().getBuildCode());
-
+        kunpo.log("获取版本号", KunpoSDK.SDKHelper.getInstance().getVersionCode());
+        kunpo.log("获取build号", KunpoSDK.SDKHelper.getInstance().getBuildCode());
         // kunpo.WindowManager.showWindow("GameWindow");
     }
 

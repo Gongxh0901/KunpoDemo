@@ -4,6 +4,11 @@
  * @Description: 
  */
 #include "SDKHelper.h"
+#if (CC_PLATFORM == CC_PLATFORM_ANDROID)
+#include "JNIAndroid/JniTools.h"
+#elif (CC_PLATFORM == CC_PLATFORM_IOS)
+
+#endif
 
 using namespace KunpoSDK;
 namespace KunpoSDK {
@@ -22,22 +27,22 @@ SDKHelper::SDKHelper() {
 
 std::string SDKHelper::getVersionCode()
 {
+    CC_LOG_DEBUG("SDKHelper 获取版本号");
 #if (CC_PLATFORM == CC_PLATFORM_ANDROID)
-//    return ISdkKunpoHelper::getInstance()->getVersionCode();
+    return JniTools::getVersionCode();
 #elif (CC_PLATFORM == CC_PLATFORM_IOS)
 
 #endif
-    CC_LOG_DEBUG("SDKHelper 获取版本号");
     return "0.0.1";
 }
 
 int SDKHelper::getBuildCode()
 {
+    CC_LOG_DEBUG("SDKHelper 获取Build号");
 #if (CC_PLATFORM == CC_PLATFORM_ANDROID)
-//    return ISdkKunpoHelper::getInstance()->getBuildCode();
+    return JniTools::getBuildCode();
 #elif (CC_PLATFORM == CC_PLATFORM_IOS)
 
 #endif
-    CC_LOG_DEBUG("SDKHelper 获取Build号");
     return 0;
 }
