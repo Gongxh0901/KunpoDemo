@@ -40,8 +40,12 @@ export class GameEntry extends kunpo.CocosEntry {
             complete: () => {
                 fgui.UIPackage.addPackage("ui/manual/Basics");
 
-                kunpo.HotUpdateManager.getInstance().init(this.manifest, "0.1.11");
-                this.checkHotUpdate();
+                if (kunpo.Platform.isNativeMobile) {
+                    kunpo.HotUpdateManager.getInstance().init(this.manifest, KunpoSDK.SDKHelper.getInstance().getVersionCode());
+                    this.checkHotUpdate();
+                } else {
+                    this.loadResources();
+                }
             },
             fail: (msg: string, err: Error) => {
 

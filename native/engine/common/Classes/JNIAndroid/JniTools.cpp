@@ -27,15 +27,12 @@ int JniTools::getBuildCode() {
 #if (CC_PLATFORM == CC_PLATFORM_ANDROID)
 extern "C"
 {
-//    JNIEXPORT void Java_com_kunpo_kungpow_KunpoHelper_sdkInitFinishCallback(JNIEnv* env, jclass thiz, jstring jsresult, jstring jsjson)
-//    {
-//        std::string result = JniHelper::jstring2string(jsresult);
-//        std::string json = JniHelper::jstring2string(jsjson);
-//
-//        CC_CURRENT_ENGINE()->getScheduler()->performFunctionInCocosThread([=]() {
-//             std::string arg = "sdkInitFinishCallback&" + result + "&" + json;
-//             KunpoSDK::SDKHelper::getInstance()->callJs(arg.c_str());
-//        });
-//    }
+    JNIEXPORT void Java_com_kunpo_KunpoHelper_CallJS(JNIEnv* env, jclass thiz, jstring jsjson)
+    {
+        std::string json = JniHelper::jstring2string(jsjson);
+        CC_CURRENT_ENGINE()->getScheduler()->performFunctionInCocosThread([=]() {
+             KunpoSDK::SDKHelper::getInstance()->callJS(json.c_str());
+        });
+    }
 }
 #endif

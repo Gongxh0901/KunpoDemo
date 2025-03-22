@@ -13,6 +13,10 @@ public class KunpoHelper {
         _activity = activity;
     }
 
+    public static void getSystemInfo() {
+        
+    }
+
     public static String getVersionCode() {
         String localVersion = "0.0.1";
         try {
@@ -34,4 +38,10 @@ public class KunpoHelper {
         }
         return localVersion;
     }
+
+    /**
+     * 回调给JS层的接口
+     * @param json 格式 { function: string, args: string }
+     */
+    public static native void CallJS(String json);
 }

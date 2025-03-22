@@ -101,6 +101,26 @@ static bool js_new_KunpoSDK_SDKHelper(se::State& s) // NOLINT(readability-identi
 }
 SE_BIND_CTOR(js_new_KunpoSDK_SDKHelper, __jsb_KunpoSDK_SDKHelper_class, js_delete_KunpoSDK_SDKHelper)
 
+static bool js_KunpoSDK_SDKHelper_getSystemInfo(se::State& s)
+{
+    CC_UNUSED bool ok = true;
+    const auto& args = s.args();
+    size_t argc = args.size();
+    KunpoSDK::SDKHelper *arg1 = (KunpoSDK::SDKHelper *) NULL ;
+    
+    if(argc != 0) {
+        SE_REPORT_ERROR("wrong number of arguments: %d, was expecting %d", (int)argc, 0);
+        return false;
+    }
+    arg1 = SE_THIS_OBJECT<KunpoSDK::SDKHelper>(s);
+    if (nullptr == arg1) return true;
+    (arg1)->getSystemInfo();
+    
+    
+    return true;
+}
+SE_BIND_FUNC(js_KunpoSDK_SDKHelper_getSystemInfo) 
+
 static bool js_KunpoSDK_SDKHelper_getVersionCode(se::State& s)
 {
     CC_UNUSED bool ok = true;
@@ -150,6 +170,32 @@ static bool js_KunpoSDK_SDKHelper_getBuildCode(se::State& s)
 }
 SE_BIND_FUNC(js_KunpoSDK_SDKHelper_getBuildCode) 
 
+static bool js_KunpoSDK_SDKHelper_callJS(se::State& s)
+{
+    CC_UNUSED bool ok = true;
+    const auto& args = s.args();
+    size_t argc = args.size();
+    KunpoSDK::SDKHelper *arg1 = (KunpoSDK::SDKHelper *) NULL ;
+    char *arg2 = (char *) NULL ;
+    ccstd::string temp2 ;
+    
+    if(argc != 1) {
+        SE_REPORT_ERROR("wrong number of arguments: %d, was expecting %d", (int)argc, 1);
+        return false;
+    }
+    arg1 = SE_THIS_OBJECT<KunpoSDK::SDKHelper>(s);
+    if (nullptr == arg1) return true;
+    
+    ok &= sevalue_to_native(args[0], &temp2);
+    SE_PRECONDITION2(ok, false, "Error processing arguments");
+    arg2 = (char *) temp2.c_str(); 
+    (arg1)->callJS((char const *)arg2);
+    
+    
+    return true;
+}
+SE_BIND_FUNC(js_KunpoSDK_SDKHelper_callJS) 
+
 static bool js_delete_KunpoSDK_SDKHelper(se::State& s)
 {
     return true;
@@ -161,8 +207,10 @@ bool js_register_KunpoSDK_SDKHelper(se::Object* obj) {
     
     cls->defineStaticProperty("__isJSB", se::Value(true), se::PropertyAttribute::READ_ONLY | se::PropertyAttribute::DONT_ENUM | se::PropertyAttribute::DONT_DELETE);
     
+    cls->defineFunction("getSystemInfo", _SE(js_KunpoSDK_SDKHelper_getSystemInfo)); 
     cls->defineFunction("getVersionCode", _SE(js_KunpoSDK_SDKHelper_getVersionCode)); 
     cls->defineFunction("getBuildCode", _SE(js_KunpoSDK_SDKHelper_getBuildCode)); 
+    cls->defineFunction("callJS", _SE(js_KunpoSDK_SDKHelper_callJS)); 
     
     
     cls->defineStaticFunction("getInstance", _SE(js_KunpoSDK_SDKHelper_getInstance_static)); 

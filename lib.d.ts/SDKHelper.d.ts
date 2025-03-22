@@ -8,6 +8,7 @@ declare namespace KunpoSDK {
     class SDKHelper {
         static getInstance(): SDKHelper;
 
+        public getSystemInfo(): void;
         public getVersionCode(): string;
         public getBuildCode(): number;
 
