@@ -21,6 +21,7 @@
     <component id="eiv0r" name="ConditionWindow.xml" path="/" exported="true"/>
     <image id="eiv0s" name="image_reddot_bg.png" path="/image/"/>
     <component id="eiv0t" name="item_reddot.xml" path="/image/"/>
+    <component id="jwlwu" name="SocketTestWindow.xml" path="/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

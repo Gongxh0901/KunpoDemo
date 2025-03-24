@@ -12,7 +12,7 @@ export class GameEntry extends kunpo.CocosEntry {
 
     public getConfig(): kunpo.FrameConfig {
         return {
-            debug: true
+            debug: false
         };
     }
 

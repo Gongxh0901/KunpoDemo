@@ -6,6 +6,7 @@
 
 import { cc, kunpo } from "./header";
 
+const tt = window['tt'];
 
 export class Debug {
     public static Register(): void {
@@ -46,5 +47,19 @@ export class Debug {
             }
         });
     }
-}
 
+    /** 跳转侧边栏 */
+    public navigateToScene(): void {
+        if (tt['navigateToScene']) {
+            tt['navigateToScene']({
+                scene: "sidebar",
+                success: (res: { errMsg: string }) => {
+                    console.log(`侧边栏跳转成功:${res.errMsg}`);
+                },
+                fail: (res: { errMsg: string, errNo: number }) => {
+                    console.log(`侧边栏跳转失败 code:${res.errNo}; msg:${res.errMsg}`);
+                },
+            });
+        }
+    }
+}

@@ -11,12 +11,6 @@ const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
 export class HomeWindow extends kunpo.Window {
     @uiprop private btn_header1: fgui.GButton;
     @uiprop private btn_header2: fgui.GButton;
-    // @uiprop private btn_empty: fgui.GButton;
-    // @uiprop private btn_closeone: fgui.GButton;
-    // @uiprop private btn_closeall: fgui.GButton;
-    // @uiprop private btn_hideone: fgui.GButton;
-    // @uiprop private btn_hideall: fgui.GButton;
-    // @uiprop private btn_game: fgui.GButton;
 
     protected onInit(): void {
         this.adapterType = kunpo.AdapterType.Bang;
@@ -84,6 +78,11 @@ export class HomeWindow extends kunpo.Window {
     @uiclick
     private onClickBtnHideAll(): void {
         kunpo.WindowManager.showWindow("HideAllWindow");
+    }
+
+    @uiclick
+    private onSocketWindow(): void {
+        kunpo.WindowManager.showWindow("SocketTestWindow");
     }
 
     @uiclick

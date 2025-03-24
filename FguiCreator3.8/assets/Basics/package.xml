@@ -20,6 +20,10 @@
     <component id="ukhnh" name="AlertWindow.xml" path="/window/" exported="true"/>
     <component id="ukhni" name="btn_close.xml" path="/btns/" exported="true"/>
     <image id="ukhnj" name="image_button_close.png" path="/btns/"/>
+    <component id="gukgk" name="ToastWindow.xml" path="/window/" exported="true"/>
+    <image id="gukgl" name="image_toastbg.png" path="/window/toast/"/>
+    <component id="gukgm" name="toast.xml" path="/window/toast/"/>
+    <image id="gukgn" name="image_black.png" path="/image/" scale="9grid" scale9grid="4,4,2,2"/>
   </resources>
   <publish name="" path="/Users/gongxh/work/kunpo-lib/KunpoDemo/assets/resources/ui/manual" packageCount="2"/>
 </packageDescription>

@@ -231,6 +231,11 @@
             "name": "btn_config",
             "idPath": "n18_pldv",
             "namePath": "btn_config"
+        },
+        "onSocketWindow": {
+            "name": "btn_socket",
+            "idPath": "n19_jwlw",
+            "namePath": "btn_socket"
         }
     },
     "__version__": "0.0.1"
