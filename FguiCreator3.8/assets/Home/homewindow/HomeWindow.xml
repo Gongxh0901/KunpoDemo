@@ -8,45 +8,49 @@
       <relation target="" sidePair="left-left,top-top"/>
       <Button title="header1" titleFontSize="26"/>
     </component>
-    <component id="n12_wx4p" name="btn_header2" src="zmnjh" fileName="button/button1.xml" xy="30,308" size="320,73">
+    <component id="n12_wx4p" name="btn_header2" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="30,308" size="320,73">
       <relation target="" sidePair="left-left,top-top"/>
       <Button title="header2" titleFontSize="26"/>
     </component>
-    <component id="n3_zmnj" name="btn_empty" src="zmnjh" fileName="button/button1.xml" xy="30,411" size="320,73">
+    <component id="n3_zmnj" name="btn_empty" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="30,411" size="320,73">
       <relation target="" sidePair="left-left,top-top"/>
       <Button title="没有header" titleFontSize="26"/>
     </component>
-    <component id="n4_zmnj" name="btn_closeone" src="zmnjh" fileName="button/button1.xml" xy="408,205" size="320,73">
+    <component id="n4_zmnj" name="btn_closeone" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="408,205" size="320,73">
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="关闭前一个" titleFontSize="26"/>
     </component>
-    <component id="n5_zmnj" name="btn_closeall" src="zmnjh" fileName="button/button1.xml" xy="408,308" size="320,73">
+    <component id="n5_zmnj" name="btn_closeall" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="408,308" size="320,73">
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="关闭所有" titleFontSize="26"/>
     </component>
-    <component id="n13_wx4p" name="btn_hideone" src="zmnjh" fileName="button/button1.xml" xy="407,411" size="320,73">
+    <component id="n13_wx4p" name="btn_hideone" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="407,411" size="320,73">
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="隐藏前一个" titleFontSize="26"/>
     </component>
-    <component id="n14_wx4p" name="btn_hideall" src="zmnjh" fileName="button/button1.xml" xy="408,514" size="320,73">
+    <component id="n14_wx4p" name="btn_hideall" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="408,514" size="320,73">
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="隐藏所有" titleFontSize="26"/>
     </component>
-    <component id="n17_eiv0" name="btn_condition" src="zmnjh" fileName="button/button1.xml" xy="215,930" size="320,73">
+    <component id="n17_eiv0" name="btn_condition" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="215,930" size="320,73">
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="条件显示节点" titleFontSize="26"/>
     </component>
-    <component id="n16_cmn3" name="btn_game" src="zmnjh" fileName="button/button1.xml" xy="215,1054" size="320,73">
+    <component id="n16_cmn3" name="btn_game" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="215,1054" size="320,73">
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="开始战斗 ec系统使用" titleFontSize="26"/>
     </component>
-    <component id="n18_pldv" name="btn_config" src="zmnjh" fileName="button/button1.xml" xy="215,810" size="320,73">
+    <component id="n18_pldv" name="btn_config" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="215,810" size="320,73">
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="加载二进制数据表" titleFontSize="26"/>
     </component>
-    <component id="n19_jwlw" name="btn_socket" src="zmnjh" fileName="button/button1.xml" xy="269,679" size="212,99">
+    <component id="n19_jwlw" name="btn_socket" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="249,682" size="212,99">
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="socket测试" titleFontSize="26"/>
+    </component>
+    <component id="n20_jevi" name="btn_minigame" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="22,682" size="212,99">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+      <Button title="小游戏接口测试" titleFontSize="26"/>
     </component>
   </displayList>
 </component>

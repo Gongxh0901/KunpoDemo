@@ -5,26 +5,26 @@
     <graph id="n0_73ie" name="n0" xy="25,67" size="700,1200" type="rect" lineSize="5" fillColor="#ff666666" corner="20">
       <relation target="" sidePair="width-width,height-height,center-center,middle-middle"/>
     </graph>
-    <component id="n2_fnoh" name="btn_close" src="fnohl" fileName="button/btn_close.xml" xy="631,50">
+    <component id="n2_fnoh" name="btn_close" src="ukhni" fileName="btns/btn_close.xml" pkg="mkwn34a7" xy="631,50">
       <relation target="n0_73ie" sidePair="right-right,top-top"/>
     </component>
-    <component id="n5_jwlw" name="btn_stop" src="zmnjh" fileName="button/button1.xml" xy="220,411" size="310,87" touchable="false" grayed="true">
+    <component id="n5_jwlw" name="btn_stop" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="220,411" size="310,87" touchable="false" grayed="true">
       <gearLook controller="status" pages="0" values="1,0,1,0" default="1,0,0,1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="断开连接"/>
     </component>
-    <component id="n3_jwlw" name="btn_start" src="zmnjh" fileName="button/button1.xml" xy="220,295" size="310,87">
+    <component id="n3_jwlw" name="btn_start" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="220,295" size="310,87">
       <gearLook controller="status" pages="1" values="1,0,0,1" default="1,0,0,1"/>
       <gearText controller="status" pages="1" values="连接中" default="连接"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="连接"/>
     </component>
-    <component id="n4_jwlw" name="btn_send" src="zmnjh" fileName="button/button1.xml" xy="398,905" size="310,87" touchable="false" grayed="true">
+    <component id="n4_jwlw" name="btn_send" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="398,905" size="310,87" touchable="false" grayed="true">
       <gearLook controller="status" pages="0" values="1,0,1,0" default="1,0,0,1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="发送文本消息"/>
     </component>
-    <component id="n10_fxlq" name="btn_send_protobuf" src="zmnjh" fileName="button/button1.xml" xy="55,905" size="310,87" touchable="false" grayed="true">
+    <component id="n10_fxlq" name="btn_send_protobuf" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="55,905" size="310,87" touchable="false" grayed="true">
       <gearLook controller="status" pages="0" values="1,0,1,0" default="1,0,0,1"/>
       <relation target="" sidePair="center-center,bottom-bottom"/>
       <Button title="发送二进制消息"/>

@@ -7,7 +7,7 @@
     <text id="n3_fnoh" name="n3" xy="223,627" size="304,79" fontSize="60" color="#ffffff" align="center" vAlign="middle" text="隐藏前一个">
       <relation target="" sidePair="center-center,middle-middle"/>
     </text>
-    <component id="n4_fnoh" name="btn_close" src="fnohl" fileName="button/btn_close.xml" xy="612,343">
+    <component id="n4_fnoh" name="btn_close" src="ukhni" fileName="btns/btn_close.xml" pkg="mkwn34a7" xy="612,343">
       <relation target="n2_fnoh" sidePair="right-right,top-top"/>
     </component>
   </displayList>

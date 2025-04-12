@@ -97,6 +97,16 @@ export class HomeWindow extends kunpo.Window {
         kunpo.WindowManager.showWindow("ConditionWindow");
     }
 
+
+    @uiclick
+    private onClickMiniGame(): void {
+        if (kunpo.Platform.isWX || kunpo.Platform.isAlipay || kunpo.Platform.isBytedance) {
+            kunpo.WindowManager.showWindow("MiniGameWindow");
+        } else {
+            kunpo.WindowManager.showWindowIm("ToastWindow", { text: "当前平台不是 微信/阿里/抖音小游戏" })
+        }
+    }
+
     @uiclick
     private onClickLoadBuffer(): void {
         let paths: kunpo.IAssetConfig[] = [
