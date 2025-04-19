@@ -6,7 +6,8 @@
 
 import { kunpo } from "../header";
 
-class SDKHelper {
+export class SDKHelper {
+    private static _manifestUrl: string = "";
     public static getSystemInfo(): Promise<{ version: string, build: number }> {
         return new Promise((resolve, reject) => {
             KunpoSDK.SDKHelper.getInstance().getSystemInfo();
@@ -14,5 +15,13 @@ class SDKHelper {
                 resolve(data);
             }, this);
         });
+    }
+
+    public static set manifestUrl(url: string) {
+        this._manifestUrl = url;
+    }
+
+    public static get manifestUrl(): string {
+        return this._manifestUrl;
     }
 }

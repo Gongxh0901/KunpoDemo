@@ -241,6 +241,11 @@
             "name": "btn_minigame",
             "idPath": "n20_jevi",
             "namePath": "btn_minigame"
+        },
+        "onClickBtnHotUpdate": {
+            "name": "btn_hotupdate",
+            "idPath": "n21_bz1o",
+            "namePath": "btn_hotupdate"
         }
     },
     "__version__": "0.0.1"

@@ -108,6 +108,15 @@ export class HomeWindow extends kunpo.Window {
     }
 
     @uiclick
+    private onClickBtnHotUpdate(): void {
+        if (kunpo.Platform.isNativeMobile) {
+            kunpo.WindowManager.showWindow("HotUpdateWindow");
+        } else {
+            kunpo.WindowManager.showWindowIm("ToastWindow", { text: "只有原生平台才支持热更新" })
+        }
+    }
+
+    @uiclick
     private onClickLoadBuffer(): void {
         let paths: kunpo.IAssetConfig[] = [
             { path: "config/buffer", type: cc.BufferAsset },
