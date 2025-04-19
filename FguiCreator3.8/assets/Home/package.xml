@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="7jytqmr7">
   <resources>
-    <component id="g0n30" name="HomeWindow.xml" path="/homewindow/" exported="true"/>
-    <component id="jdbj1" name="PopWindowHeader1.xml" path="/" exported="true"/>
-    <image id="dj6bb" name="Icon-60@2x.png" path="/image/"/>
-    <component id="fnohi" name="HideOneWindow.xml" path="/" exported="true"/>
-    <component id="fnohj" name="HideAllWindow.xml" path="/" exported="true"/>
-    <component id="fnohm" name="CloseOneWindow.xml" path="/" exported="true"/>
-    <component id="fnohn" name="CloseAllWindow.xml" path="/" exported="true"/>
-    <component id="hg37o" name="CustomComponents.xml" path="/"/>
-    <component id="wx4pp" name="PopWindowHeader2.xml" path="/" exported="true"/>
-    <component id="wx4pq" name="PopWindow.xml" path="/" exported="true"/>
-    <component id="eiv0r" name="ConditionWindow.xml" path="/" exported="true"/>
-    <image id="eiv0s" name="image_reddot_bg.png" path="/image/"/>
-    <component id="eiv0t" name="item_reddot.xml" path="/image/"/>
-    <component id="jwlwu" name="SocketTestWindow.xml" path="/" exported="true"/>
+    <component id="g0n30" name="HomeWindow.xml" path="/" exported="true"/>
   </resources>
-  <publish name=""/>
+  <publish name="" path="../assets/resources/ui/manual" packageCount="2"/>
 </packageDescription>

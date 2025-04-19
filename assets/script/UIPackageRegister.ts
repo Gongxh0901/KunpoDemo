@@ -16,7 +16,7 @@ export class UIPackageRegister {
                  * 2. 资源header所在的包
                  * 3. 用于一些特殊场景, 比如需要和其他资源一起加载, 并且显示进度条的包
                  */
-                manualPackages: ["Basics"],
+                manualPackages: ["Basics", "Home"],
                 /**
                  * 不推荐配置 只是提供一种特殊需求的实现方式
                  * 窗口引用到其他包中的资源 需要的配置信息

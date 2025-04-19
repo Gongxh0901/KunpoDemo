@@ -27,7 +27,7 @@ export class GameEntry extends kunpo.CocosEntry {
 
         Debug.Register();
         UIPackageRegister.Register();
-        SDKHelper.manifestUrl = this.manifest.nativeUrl;
+        SDKHelper.manifestUrl = this.manifest?.nativeUrl;
         this.loadBaseResources();
     }
 
@@ -41,6 +41,7 @@ export class GameEntry extends kunpo.CocosEntry {
             configs: paths,
             complete: () => {
                 fgui.UIPackage.addPackage("ui/manual/Basics");
+                fgui.UIPackage.addPackage("ui/manual/Home");
                 this.loadResources();
             },
             fail: (msg: string, err: Error) => {

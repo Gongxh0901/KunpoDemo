@@ -246,6 +246,11 @@
             "name": "btn_hotupdate",
             "idPath": "n21_bz1o",
             "namePath": "btn_hotupdate"
+        },
+        "onClickUI": {
+            "name": "btn_ui",
+            "idPath": "n22_sf8l",
+            "namePath": "btn_ui"
         }
     },
     "__version__": "0.0.1"
