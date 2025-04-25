@@ -14,7 +14,7 @@
 #include "bindings/manual/jsb_conversions.h"
 #include "cocos/cocos.h"
 
-#include "SDKHelper.h"  // 添加这行，%include 指令表示让 swig 解析此文件，并且为此文件中的类生成绑定代码。
+#include "../../SDKHelper.h"  // 添加这行，%include 指令表示让 swig 解析此文件，并且为此文件中的类生成绑定代码。
 %}
 
 // %{ ... %} 代码块中的内容最终会被原封不动地插入到生成的源文件(.cpp)开头的地方

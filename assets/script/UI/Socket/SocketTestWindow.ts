@@ -20,7 +20,7 @@ export class SocketTestWindow extends kunpo.Window {
 
         this._status = this.getController("status");
 
-        this.text_input.text = "ws://192.168.1.104:8080";
+        this.text_input.text = "ws://10.8.36.142:8080";
     }
 
     @uiclick

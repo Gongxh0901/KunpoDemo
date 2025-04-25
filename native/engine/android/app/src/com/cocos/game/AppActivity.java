@@ -43,6 +43,7 @@ public class AppActivity extends CocosActivity {
         KunpoHelper.setActivity(this);
         // 保持屏幕常亮
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
     }
 
     @Override

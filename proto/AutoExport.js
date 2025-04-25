@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 const path = require('path');
-
+const fs = require('fs');
 // 颜色输出
 const colors = {
     black: '\x1b[30m',
@@ -30,6 +30,18 @@ function executeCommon(command) {
     }
 }
 
+function modifyProtoJS() {
+    cclog("修改js文件");
+    // 修改 libbase中 build.gradle 的版本号
+    const protojs_path = path.join("../", "assets", "script", "Socket", "proto", "proto.js")
+    const content = fs.readFileSync(protojs_path, "utf-8");
+    let index = content.indexOf(`var $protobuf = require("protobufjs/minimal");`);
+    // 使用 var $protobuf = protobuf; 替换掉 var $protobuf = require("protobufjs/minimal");
+    const newContent = content.replace(`var $protobuf = require("protobufjs/minimal");`, "var $protobuf = protobuf;");
+    fs.writeFileSync(protojs_path, newContent);
+    cclog("修改protojs完成");
+}
+
 // 主函数
 function main() {
     // 修改当前工作目录为脚本所在目录
@@ -47,6 +59,8 @@ function main() {
     executeCommon(jsCommand);
     cclog('生成js文件成功', 'green');
 
+    modifyProtoJS();
+    
     // 生成.d.ts文件
     const tsCommand = `pbts --no-comments -o ${tsPath} ${jsPath}`;
     executeCommon(tsCommand);
