@@ -14,7 +14,7 @@ let AdId = "";
 let IsInitPay = false;
 
 // private static readonly wechat_ads_id: string = "adunit-c9b71a32c0fb3d3d";
-// private static readonly byte_ads_id: string = "38jf3c1u9qv3h9586n";
+// private static readonly byte_ads_id: string = "592b3kadh11b27p317";
 // private static readonly aliy_ads_id: string = "ad_tiny_2021004170666283_202410082200196957";
 
 @uiclass("Window", "MiniGame", "MiniGameWindow")
@@ -30,7 +30,7 @@ export class MiniGameWindow extends kunpo.Window {
 
     protected onShow(userdata?: any): void {
         kunpo.log("MiniGameWindow onShow:", userdata);
-        this.lab_adid.text = "adunit-c9b71a32c0fb3d3d";
+        this.lab_adid.text = "592b3kadh11b27p317";
 
         if (IsInitAds) {
             this.lab_adid.text = AdId;
