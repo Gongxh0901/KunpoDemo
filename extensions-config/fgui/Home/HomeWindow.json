@@ -253,5 +253,13 @@
             "namePath": "btn_ui"
         }
     },
+    "controls": {
+        "status": "status",
+        "sta2": "sta2"
+    },
+    "transitions": {
+        "t0": "t0",
+        "t1": "t1"
+    },
     "__version__": "0.0.1"
 }

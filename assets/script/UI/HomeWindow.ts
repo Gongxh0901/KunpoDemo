@@ -4,11 +4,17 @@
  * @Description: 
  */
 
-import { cc, kunpo } from "../header";
-const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
+import { cc, fgui, kunpo } from "../header";
+const { uiclass, uiprop, uiclick, uicontrol, uitransition } = kunpo._uidecorator;
 
 @uiclass("Window", "Home", "HomeWindow")
 export class HomeWindow extends kunpo.Window {
+    @uicontrol private status: fgui.Controller;
+    @uicontrol private sta2: fgui.Controller;
+
+    @uitransition private t0: fgui.Transition;
+    @uitransition private t1: fgui.Transition;
+
     protected onInit(): void {
         this.adapterType = kunpo.AdapterType.Bang;
         this.type = kunpo.WindowType.CloseAll;

@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "fairygui-cc": "^1.2.2",
-    "kunpocc": "^1.0.32",
+    "kunpocc": "^1.0.33",
     "ts-node": "^10.9.2"
   }
 }
