@@ -1,17 +1,3 @@
 {
-    "entity1": {
-        "LimitMove": {
-            "radius": 30
-        },
-        "Move": {
-            "_speed": 120
-        },
-        "PositionUpdateSystem": {},
-        "RenderPrefab": {
-            "uuid": "56dc9bdf-19c7-4319-8c27-628ea6424696"
-        },
-        "RootNode": {},
-        "ScreenRebound": {},
-        "Transform": {}
-    }
+    "entity1": {}
 }
