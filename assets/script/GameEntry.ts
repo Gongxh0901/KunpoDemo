@@ -1,6 +1,7 @@
 import { Debug } from './Debug';
 import { cc, fgui, kunpo } from './header';
 import { SDKHelper } from './Helper/SDKHelper';
+import { WorldHelper } from './Helper/WorldHelper';
 import { UIPackageRegister } from './UIPackageRegister';
 const { ccclass, property, menu } = cc._decorator;
 @ccclass("GameEntry")
@@ -83,6 +84,7 @@ export class GameEntry extends kunpo.CocosEntry {
             kunpo.log("接收到事件");
         }, this);
 
+        WorldHelper.register();
         kunpo.WindowManager.showWindow("HomeWindow", "这是一个测试窗口").then(() => {
             kunpo.log("窗口显示成功");
             this.root.active = false;

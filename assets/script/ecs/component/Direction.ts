@@ -1,13 +1,13 @@
 /**
  * @Author: Gongxh
- * @Date: 2025-05-13
+ * @Date: 2025-05-16
  * @Description: 
  */
 import { ecs } from "../../header";
 const { ecsclass, ecsprop } = ecs._ecsdecorator;
 
-@ecsclass("Position", { describe: "位置组件" })
-export class Position extends ecs.Component {
+@ecsclass("Direction", { describe: "方向组件" })
+export class Direction extends ecs.Component {
     @ecsprop({ type: "int", defaultValue: 0 })
     public x: number = 0;
 
