@@ -4,13 +4,13 @@
  * @Date: 2021-04-27 09:20:14
  */
 
-import { cc, fgui, kunpo } from "../../../header";
+import { ccc, fgui, kunpo } from "../../../header";
 interface ToastData {
     text: string, // 文本
     duration?: number, // 持续时间
     swallowTouch?: boolean, // 吞噬touch事件
     showMask?: boolean, // 显示遮罩
-    align?: cc.HorizontalTextAlignment // 对齐方式
+    align?: ccc.HorizontalTextAlignment // 对齐方式
 }
 
 const { uiclass, uiprop } = kunpo._uidecorator;
@@ -39,7 +39,7 @@ export class ToastWindow extends kunpo.Window {
      * @param {number} data.duration 存在时间（ < 0）为常驻 default 2秒
      * @param {boolean} data.swallowTouch 吞噬touch事件 default 不吞噬
      * @param {boolean} data.showMask 是否显示半透明遮罩 (当显示遮罩时，必定吞噬touch事件) default 不显示
-     * @param {cc.HorizontalTextAlignment} data.align 横向文本对齐方式 default 居中对齐
+     * @param {ccc.HorizontalTextAlignment} data.align 横向文本对齐方式 default 居中对齐
      */
     protected onShow(data: ToastData): void {
         this.bgMask.visible = data.showMask;
@@ -53,7 +53,7 @@ export class ToastWindow extends kunpo.Window {
 
         this.labTips.text = data.text;
 
-        let align = data.align || cc.HorizontalTextAlignment.CENTER;
+        let align = data.align || ccc.HorizontalTextAlignment.CENTER;
         this.labTips.align = align;
         this.labTips.autoSize = fgui.AutoSizeType.Both;
         this.labTips.ensureSizeCorrect();

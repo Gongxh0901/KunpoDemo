@@ -1,6 +1,6 @@
 {
     "name": "entity1",
-    "alias": "实体23",
+    "alias": "实体1",
     "group": "",
     "components": [
         {
@@ -35,6 +35,39 @@
             "name": "RenderPrefab",
             "props": {
                 "uuid": "56dc9bdf-19c7-4319-8c27-628ea6424696"
+            }
+        },
+        {
+            "name": "Position",
+            "props": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        {
+            "name": "SpriteFrame",
+            "props": {
+                "uuid": "274235a8-2bda-4684-b0c6-d9c089bd9dd6@f9941"
+            }
+        },
+        {
+            "name": "Direction",
+            "props": {
+                "x": 0.6,
+                "y": 0.3
+            }
+        },
+        {
+            "name": "Speed",
+            "props": {
+                "speed": 25
+            }
+        },
+        {
+            "name": "Scale",
+            "props": {
+                "scaleX": 1,
+                "scaleY": 1
             }
         }
     ]

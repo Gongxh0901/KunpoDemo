@@ -4,7 +4,7 @@
  * @Description: 
  */
 
-import { cc, fgui, kunpo } from "../header";
+import { ccc, fgui, kunpo } from "../header";
 const { uiclass, uiprop, uiclick, uicontrol, uitransition } = kunpo._uidecorator;
 
 @uiclass("Window", "Home", "HomeWindow")
@@ -68,7 +68,7 @@ export class HomeWindow extends kunpo.Window {
     @uiclick
     private onClickLoadBuffer(): void {
         let paths: kunpo.IAssetConfig[] = [
-            { path: "config/buffer", type: cc.BufferAsset },
+            { path: "config/buffer", type: ccc.BufferAsset },
         ];
         let loader = new kunpo.AssetLoader("load");
         loader.start({
@@ -76,13 +76,13 @@ export class HomeWindow extends kunpo.Window {
             complete: () => {
                 kunpo.log("加载成功");
 
-                let basic = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/basic");
+                let basic = kunpo.AssetPool.get<ccc.BufferAsset>("config/buffer/basic");
                 kunpo.log("basic", JSON.stringify(kunpo.Binary.toJson(basic.buffer())));
 
-                let dict = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/dict");
+                let dict = kunpo.AssetPool.get<ccc.BufferAsset>("config/buffer/dict");
                 kunpo.log("dict", JSON.stringify(kunpo.Binary.toJson(dict.buffer())));
 
-                let listDict = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/list_dict");
+                let listDict = kunpo.AssetPool.get<ccc.BufferAsset>("config/buffer/list_dict");
                 kunpo.log("list_dict", JSON.stringify(kunpo.Binary.toJson(listDict.buffer())));
 
                 let aaa = {

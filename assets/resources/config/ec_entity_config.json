@@ -1,3 +1,22 @@
 {
-    "entity1": {}
+    "entity1": {
+        "Direction": {
+            "x": 0.6,
+            "y": 0.3
+        },
+        "Position": {
+            "x": 1,
+            "y": 1
+        },
+        "Scale": {
+            "scaleX": 1,
+            "scaleY": 1
+        },
+        "Speed": {
+            "speed": 25
+        },
+        "SpriteFrame": {
+            "uuid": "274235a8-2bda-4684-b0c6-d9c089bd9dd6@f9941"
+        }
+    }
 }

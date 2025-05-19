@@ -1,16 +1,16 @@
 import { Debug } from './Debug';
-import { cc, fgui, kunpo } from './header';
+import { ccc, ecs, fgui, kunpo } from './header';
 import { SDKHelper } from './Helper/SDKHelper';
 import { WorldHelper } from './Helper/WorldHelper';
 import { UIPackageRegister } from './UIPackageRegister';
-const { ccclass, property, menu } = cc._decorator;
+const { ccclass, property, menu } = ccc._decorator;
 @ccclass("GameEntry")
 @menu("kunpo/GameEntry")
 export class GameEntry extends kunpo.CocosEntry {
-    @property(cc.Node)
-    private root: cc.Node = null;
-    @property(cc.Asset)
-    private manifest: cc.Asset = null;
+    @property(ccc.Node)
+    private root: ccc.Node = null;
+    @property(ccc.Asset)
+    private manifest: ccc.Asset = null;
 
     public getConfig(): kunpo.FrameConfig {
         return {
@@ -19,10 +19,10 @@ export class GameEntry extends kunpo.CocosEntry {
     }
 
     onInit(): void {
-        let deviceId = cc.sys.localStorage.getItem('xBBres');
+        let deviceId = ccc.sys.localStorage.getItem('xBBres');
         if (!deviceId || deviceId === "") {
             deviceId = "browser@" + Date.now().toString();
-            cc.sys.localStorage.setItem('xBBres', deviceId);
+            ccc.sys.localStorage.setItem('xBBres', deviceId);
         }
         kunpo.Platform.deviceId = deviceId;
 
@@ -35,7 +35,7 @@ export class GameEntry extends kunpo.CocosEntry {
     /** 1. 加载基础资源 */
     private loadBaseResources(): void {
         let paths: kunpo.IAssetConfig[] = [
-            { path: "ui/manual", type: cc.Asset }, // 手动加载UI基础资源
+            { path: "ui/manual", type: ccc.Asset }, // 手动加载UI基础资源
         ];
         let loader = new kunpo.AssetLoader("load");
         loader.start({
@@ -57,11 +57,11 @@ export class GameEntry extends kunpo.CocosEntry {
     /** 2. 加载剩余资源 */
     private loadResources(): void {
         let paths: kunpo.IAssetConfig[] = [
-            { path: "prefab", type: cc.Prefab },
-            { path: "config/buffer", type: cc.BufferAsset },
-            // { path: "icon", type: cc.SpriteFrame },
-            // { path: "texture/6101/spriteFrame", type: cc.SpriteFrame, isFile: true },
-            // { path: "pet", type: cc.SpriteFrame, bundle: "bundle_res" },
+            { path: "prefab", type: ccc.Prefab },
+            { path: "config/buffer", type: ccc.BufferAsset },
+            { path: "icon", type: ccc.SpriteFrame },
+            // { path: "texture/6101/spriteFrame", type: ccc.SpriteFrame, isFile: true },
+            // { path: "pet", type: ccc.SpriteFrame, bundle: "bundle_res" },
         ];
         let loader = new kunpo.AssetLoader("load");
         loader.start({
@@ -84,6 +84,7 @@ export class GameEntry extends kunpo.CocosEntry {
             kunpo.log("接收到事件");
         }, this);
 
+        ecs.Data.parse(this.ecConfig.json);
         WorldHelper.register();
         kunpo.WindowManager.showWindow("HomeWindow", "这是一个测试窗口").then(() => {
             kunpo.log("窗口显示成功");

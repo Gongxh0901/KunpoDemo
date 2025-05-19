@@ -4,7 +4,7 @@
  * @Description: 
  */
 
-import { cc, kunpo } from "./header";
+import { ccc, kunpo } from "./header";
 
 const tt = window['tt'];
 
@@ -14,35 +14,35 @@ export class Debug {
     }
 
     private static _registerSystemEvent(): void {
-        cc.input.on(cc.Input.EventType.KEY_DOWN, (event: cc.EventKeyboard) => {
-            if (event.keyCode == cc.KeyCode.KEY_Q) {
+        ccc.input.on(ccc.Input.EventType.KEY_DOWN, (event: ccc.EventKeyboard) => {
+            if (event.keyCode == ccc.KeyCode.KEY_Q) {
                 kunpo.WindowManager.showWindow("HomeWindow")
-            } else if (event.keyCode == cc.KeyCode.KEY_W) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_W) {
                 kunpo.WindowManager.showWindow("HideAllWindow");
-            } else if (event.keyCode == cc.KeyCode.KEY_E) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_E) {
                 kunpo.WindowManager.showWindow("HideOneWindow");
-            } else if (event.keyCode == cc.KeyCode.KEY_R) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_R) {
                 kunpo.WindowManager.showWindow("CloseAllWindow");
-            } else if (event.keyCode == cc.KeyCode.KEY_T) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_T) {
                 kunpo.WindowManager.showWindow("CloseOneWindow");
-            } else if (event.keyCode == cc.KeyCode.KEY_Y) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_Y) {
                 kunpo.WindowManager.showWindow("GameWindow");
-            } else if (event.keyCode == cc.KeyCode.KEY_U) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_U) {
 
-            } else if (event.keyCode == cc.KeyCode.KEY_A) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_A) {
                 kunpo.WindowManager.showWindow("PopWindowHeader1");
                 // new NetAuth().start();
-            } else if (event.keyCode == cc.KeyCode.KEY_S) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_S) {
                 kunpo.WindowManager.showWindow("PopWindowHeader2");
-            } else if (event.keyCode == cc.KeyCode.KEY_D) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_D) {
                 kunpo.WindowManager.showWindow("PopWindow");
-            } else if (event.keyCode == cc.KeyCode.KEY_F) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_F) {
 
-            } else if (event.keyCode == cc.KeyCode.KEY_G) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_G) {
 
-            } else if (event.keyCode == cc.KeyCode.KEY_H) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_H) {
 
-            } else if (event.keyCode == cc.KeyCode.KEY_J) {
+            } else if (event.keyCode == ccc.KeyCode.KEY_J) {
 
             }
         });

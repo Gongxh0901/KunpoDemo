@@ -1,4 +1,4 @@
-import { cc, fgui, kunpo } from '../../../header';
+import { ccc, fgui, kunpo } from '../../../header';
 const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
 
 interface WindowData {
@@ -8,7 +8,7 @@ interface WindowData {
     cancelTitle?: string;
     showClose?: boolean; // 显示关闭按钮
     emptyAreaClose?: boolean; // 点击空白区域关闭
-    align?: cc.HorizontalTextAlignment; // 内容文本水平对齐方式  default:居中对齐
+    align?: ccc.HorizontalTextAlignment; // 内容文本水平对齐方式  default:居中对齐
     leading?: number;//行距
     okNotClose?: boolean; // 点击OK按钮时不关闭本界面
     cancelNotClose?: boolean; // 点击取消按钮时不关闭本界面
@@ -76,7 +76,7 @@ export class AlertWindow extends kunpo.Window {
         }
 
         this.lab_content.text = data.content;
-        let align = typeof data.align == "number" ? data.align : cc.Label.HorizontalAlign.CENTER;
+        let align = typeof data.align == "number" ? data.align : ccc.Label.HorizontalAlign.CENTER;
         let leading = typeof data.leading == "number" ? data.leading : this.lab_content.leading;
         this.lab_content.align = align;
         this.lab_content.leading = leading;

@@ -3,7 +3,7 @@
  * @Date: 2025-05-16
  * @Description: 
  */
-import { ecs } from "../../header";
+import { ecs } from "../../../header";
 const { ecsclass, ecsprop } = ecs._ecsdecorator;
 
 @ecsclass("Speed", { describe: "速度组件" })

@@ -3,10 +3,10 @@
  * @Date: 2025-05-16
  * @Description: 
  */
-import { ecs } from "../../header";
-import { Direction } from "../component/Direction";
-import { Position } from "../component/Position";
-import { Speed } from "../component/Speed";
+import { ecs } from "../../../header";
+import { Direction } from "../../component/basics/Direction";
+import { Position } from "../../component/basics/Position";
+import { Speed } from "../../component/basics/Speed";
 const { ecsystem, ecsprop } = ecs._ecsdecorator;
 
 @ecsystem("MoveSystem", { describe: "移动系统" })

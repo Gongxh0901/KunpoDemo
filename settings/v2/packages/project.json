@@ -11,5 +11,15 @@
   "custom_joint_texture_layouts": [],
   "script": {
     "preserveSymlinks": true
-  }
+  },
+  "layer": [
+    {
+      "name": "Window",
+      "value": 1
+    },
+    {
+      "name": "Game",
+      "value": 2
+    }
+  ]
 }

@@ -4,7 +4,7 @@
  * @Description: 
  */
 
-import * as cc from "cc";
+import * as ccc from "cc";
 import * as fgui from "fairygui-cc";
 import * as kunpo from "kunpocc";
 import * as ecs from "kunpoecs";
@@ -14,5 +14,5 @@ type ProtoType = typeof protoRoot;
 const proto = (protoRoot["default"] || protoRoot) as ProtoType;
 export const protocol = proto.com.kunpo.proto;
 
-export { cc, ecs, fgui, kunpo };
+export { ccc, ecs, fgui, kunpo };
 

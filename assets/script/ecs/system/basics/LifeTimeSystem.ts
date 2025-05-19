@@ -3,8 +3,8 @@
  * @Date: 2025-05-16
  * @Description: 
  */
-import { ecs } from "../../header";
-import { LifeTime } from "../component/LifeTime";
+import { ecs } from "../../../header";
+import { LifeTime } from "../../component/LifeTime";
 const { ecsystem, ecsprop } = ecs._ecsdecorator;
 
 @ecsystem("LifeTimeSystem", { describe: "生命周期系统" })

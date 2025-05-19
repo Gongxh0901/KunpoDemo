@@ -89,7 +89,7 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 375.00000000000006,
+      "x": 374.99999999999994,
       "y": 667,
       "z": 0
     },
@@ -107,7 +107,7 @@
       "z": 1
     },
     "_mobility": 0,
-    "_layer": 33554432,
+    "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -857,7 +857,7 @@
     "_enabled": true,
     "__prefab": null,
     "_projection": 0,
-    "_priority": 0,
+    "_priority": 5,
     "_fov": 45,
     "_fovAxis": 0,
     "_orthoHeight": 667,
@@ -868,7 +868,7 @@
       "r": 0,
       "g": 0,
       "b": 0,
-      "a": 255
+      "a": 0
     },
     "_depth": 1,
     "_stencil": 0,
@@ -884,7 +884,7 @@
     "_shutter": 7,
     "_iso": 0,
     "_screenScale": 1,
-    "_visibility": 1108344832,
+    "_visibility": 1107296257,
     "_targetTexture": null,
     "_postProcess": null,
     "_usePostProcess": false,
@@ -904,7 +904,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 750,
+      "width": 749.9999999999999,
       "height": 1334
     },
     "_anchorPoint": {
@@ -942,8 +942,8 @@
     "__prefab": null,
     "_alignFlags": 45,
     "_target": null,
-    "_left": 5.684341886080802e-14,
-    "_right": 5.684341886080802e-14,
+    "_left": 0,
+    "_right": 1.1368683772161603e-13,
     "_top": 5.684341886080802e-14,
     "_bottom": 5.684341886080802e-14,
     "_horizontalCenter": 0,
@@ -1003,7 +1003,7 @@
       "z": 1
     },
     "_mobility": 0,
-    "_layer": 1073741824,
+    "_layer": 1,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -1058,7 +1058,7 @@
       "z": 1
     },
     "_mobility": 0,
-    "_layer": 1073741824,
+    "_layer": 1,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -1103,7 +1103,7 @@
       "z": 1
     },
     "_mobility": 0,
-    "_layer": 1073741824,
+    "_layer": 1,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -1163,7 +1163,7 @@
       "z": 1
     },
     "_mobility": 0,
-    "_layer": 1073741824,
+    "_layer": 1,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -1223,7 +1223,7 @@
       "z": 1
     },
     "_mobility": 0,
-    "_layer": 1073741824,
+    "_layer": 1,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -1295,7 +1295,7 @@
       "z": 1
     },
     "_mobility": 0,
-    "_layer": 1073741824,
+    "_layer": 1,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
