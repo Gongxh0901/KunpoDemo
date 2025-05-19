@@ -41,7 +41,7 @@ export class GameWindow extends kunpo.Window {
     private initWorld(): void {
         let node = new ccc.Node("World");
         node.setPosition(0, 0);
-        // node.layer = 1 << 1;
+        node.layer = 1 << 1;
         this.container.node.addChild(node);
         WorldHelper.node = node;
 

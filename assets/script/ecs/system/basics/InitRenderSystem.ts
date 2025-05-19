@@ -42,7 +42,7 @@ export class InitRenderSystem extends ecs.System {
                 const node = ccc.instantiate(asset);
                 node.setPosition(position.x, position.y);
                 WorldHelper.node.addChild(node);
-                // node.layer = 1 << 1;
+                node.layer = 1 << 1;
 
                 let render = this.world.addComponent(entity, Render);
                 render.node = node;
@@ -55,7 +55,7 @@ export class InitRenderSystem extends ecs.System {
                 sprite.spriteFrame = kunpo.AssetPool.getByUUID<ccc.SpriteFrame>(spriteFrame.uuid);
                 node.setPosition(position.x, position.y);
                 WorldHelper.node.addChild(node);
-                // node.layer = 1 << 1;
+                node.layer = 1 << 1;
 
                 let render = this.world.addComponent(entity, Render);
                 render.node = node;
