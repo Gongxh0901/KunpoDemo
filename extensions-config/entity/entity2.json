@@ -1,0 +1,14 @@
+{
+    "name": "entity2",
+    "alias": "",
+    "group": "",
+    "components": [
+        {
+            "name": "Position",
+            "props": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    ]
+}

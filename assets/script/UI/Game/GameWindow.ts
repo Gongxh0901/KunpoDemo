@@ -35,7 +35,9 @@ export class GameWindow extends kunpo.Window {
 
     @uiclick
     private onCreateEntity(): void {
-        WorldHelper.world.createEntity("entity1");
+        for (let i = 0; i < 5000; i++) {
+            WorldHelper.world.createEntity("entity1");
+        }
     }
 
     private initWorld(): void {

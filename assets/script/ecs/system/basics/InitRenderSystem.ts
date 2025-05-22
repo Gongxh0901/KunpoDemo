@@ -50,7 +50,7 @@ export class InitRenderSystem extends ecs.System {
                 // 删除组件
                 this.world.removeComponent(entity, Prefab);
             } else if (spriteFrame) {
-                let node = new ccc.Node();
+                let node = new ccc.Node(`${entity}`);
                 let sprite = node.addComponent(ccc.Sprite);
                 sprite.spriteFrame = kunpo.AssetPool.getByUUID<ccc.SpriteFrame>(spriteFrame.uuid);
                 node.setPosition(position.x, position.y);

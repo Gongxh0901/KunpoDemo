@@ -22,6 +22,7 @@ export class Render extends ecs.Component {
     // uuid: string = "";
 
     public reset(): void {
-        this.node?.destroy();
+        this.node.destroy();
+        this.node = null;
     }
 }
