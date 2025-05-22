@@ -9,6 +9,11 @@
             "name": "btn _back",
             "idPath": "n1_cmn3",
             "namePath": "btn _back"
+        },
+        "input": {
+            "name": "input",
+            "idPath": "n3_vn8n",
+            "namePath": "input"
         }
     },
     "callbacks": {
@@ -23,5 +28,7 @@
             "namePath": "btn _add"
         }
     },
+    "controls": {},
+    "transitions": {},
     "__version__": "0.0.1"
 }

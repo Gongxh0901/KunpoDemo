@@ -11,6 +11,7 @@ const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
 @uiclass("Window", "Game", "GameWindow")
 export class GameWindow extends kunpo.Window {
     @uiprop container: fgui.GComponent;
+    @uiprop input: fgui.GTextInput;
     public onInit() {
         console.log("GameWindow onInit");
         this.adapterType = kunpo.AdapterType.Full;
@@ -20,6 +21,7 @@ export class GameWindow extends kunpo.Window {
 
     protected onShow() {
         console.log("GameWindow onShow");
+        this.input.text = "5000";
         // 创建
         this.initWorld();
     }
@@ -35,7 +37,12 @@ export class GameWindow extends kunpo.Window {
 
     @uiclick
     private onCreateEntity(): void {
-        for (let i = 0; i < 5000; i++) {
+        let input = this.input.text;
+        if (input == "") {
+            return;
+        }
+        let count = parseInt(input);
+        for (let i = 0; i < count; i++) {
             WorldHelper.world.createEntity("entity1");
         }
     }
