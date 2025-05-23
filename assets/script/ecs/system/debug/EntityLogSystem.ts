@@ -8,11 +8,11 @@ const { ecsystem, ecsprop } = ecs._ecsdecorator;
 
 @ecsystem("EntityLogSystem", { describe: "实体日志系统" })
 export class EntityLogSystem extends ecs.System {
-    protected defineQuery(): ecs.IQueryData {
-        return {};
+    protected onInit(): void {
+
     }
 
     public update(dt: number): void {
-        console.log("实体数量:", this.world.entityPool.size);
+        console.log("实体数量:", this.world.entityCount, this.world.entities);
     }
 }

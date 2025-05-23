@@ -12,11 +12,8 @@ const { ecsystem, ecsprop } = ecs._ecsdecorator;
 
 @ecsystem("RenderSystem", { describe: "渲染系统" })
 export class RenderSystem extends ecs.System {
-    protected defineQuery(): ecs.IQueryData {
-        return {
-            includes: [Position, Render],
-            optionals: [Scale],
-        }
+    protected onInit(): void {
+        this.matcher.allOf(Position, Render).optionalOf(Scale);
     }
 
     public update(dt: number): void {
@@ -33,7 +30,7 @@ export class RenderSystem extends ecs.System {
 
             render.node.setPosition(position.x, position.y);
             if (scale) {
-                render.node.setScale(scale.scaleX, scale.scaleY);
+                render.node.setScale(scale.scale, scale.scale);
             }
         }
     }

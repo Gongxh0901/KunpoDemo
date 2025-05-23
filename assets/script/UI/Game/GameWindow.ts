@@ -5,6 +5,7 @@
  */
 
 import { WorldHelper } from "../../Helper/WorldHelper";
+import { QuadTree } from "../../ecs/component/singleton/QuadTree";
 import { ccc, fgui, kunpo } from "../../header";
 const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
 
@@ -54,7 +55,10 @@ export class GameWindow extends kunpo.Window {
         this.container.node.addChild(node);
         WorldHelper.node = node;
 
-        // WorldHelper.addSingleton()
+        // 配置一些单利组件
+        let width = kunpo.Screen.ScreenWidth;
+        let height = kunpo.Screen.ScreenHeight;
+        WorldHelper.addSingleton(QuadTree).quadTree = new kunpo.QuadTree(ccc.rect(-width * 0.5 - 200, -height * 0.5 - 200, width + 400, height + 400), 0);
     }
 
     protected onUpdate(dt: number): void {

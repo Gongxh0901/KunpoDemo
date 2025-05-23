@@ -11,10 +11,8 @@ const { ecsystem, ecsprop } = ecs._ecsdecorator;
 
 @ecsystem("MoveSystem", { describe: "移动系统" })
 export class MoveSystem extends ecs.System {
-    protected defineQuery(): ecs.IQueryData {
-        return {
-            includes: [Position, Speed, Direction],
-        }
+    protected onInit(): void {
+        this.matcher.allOf(Position, Speed, Direction);
     }
 
     public update(dt: number): void {

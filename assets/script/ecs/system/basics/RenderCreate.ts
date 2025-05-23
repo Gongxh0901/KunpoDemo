@@ -10,14 +10,10 @@ import { Position } from "../../component/basics/Position";
 import { Render } from "../../component/basics/Render";
 const { ecsystem, ecsprop } = ecs._ecsdecorator;
 
-@ecsystem("InitRenderSystem", { describe: "初始化渲染系统" })
-export class InitRenderSystem extends ecs.System {
-    protected defineQuery(): ecs.IQueryData {
-        return {
-            includes: [Position],
-            excludes: [Render],
-            optionals: [Prefab, SpriteFrame],
-        }
+@ecsystem("RenderCreate", { describe: "初始化渲染系统" })
+export class RenderCreate extends ecs.System {
+    protected onInit(): void {
+        this.matcher.allOf(Position).anyOf(Prefab, SpriteFrame).excludeOf(Render);
     }
 
     public update(dt: number): void {
