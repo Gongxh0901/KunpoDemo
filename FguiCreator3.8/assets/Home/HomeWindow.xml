@@ -10,10 +10,6 @@
       <relation target="" sidePair="center-center,top-top"/>
       <Button title="条件显示节点" titleFontSize="26"/>
     </component>
-    <component id="n16_cmn3" name="btn_game" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="215,741" size="320,73">
-      <relation target="" sidePair="center-center,top-top"/>
-      <Button title="开始战斗 ec系统使用" titleFontSize="26"/>
-    </component>
     <component id="n18_pldv" name="btn_config" src="kofe0" fileName="btns/button1.xml" pkg="mkwn34a7" xy="215,547" size="320,73">
       <relation target="" sidePair="center-center,top-top"/>
       <Button title="加载二进制数据表" titleFontSize="26"/>

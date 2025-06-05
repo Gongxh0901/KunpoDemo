@@ -1,5 +1,5 @@
 import { Debug } from './Debug';
-import { cc, fgui, kunpo } from './header';
+import { cc, fgui, kunpo, KunpoAssets } from './header';
 import { SDKHelper } from './Helper/SDKHelper';
 import { UIPackageRegister } from './UIPackageRegister';
 const { ccclass, property, menu } = cc._decorator;
@@ -33,10 +33,10 @@ export class GameEntry extends kunpo.CocosEntry {
 
     /** 1. 加载基础资源 */
     private loadBaseResources(): void {
-        let paths: kunpo.IAssetConfig[] = [
+        let paths: KunpoAssets.IAssetConfig[] = [
             { path: "ui/manual", type: cc.Asset }, // 手动加载UI基础资源
         ];
-        let loader = new kunpo.AssetLoader("load");
+        let loader = new KunpoAssets.AssetLoader("load");
         loader.start({
             configs: paths,
             complete: () => {
@@ -55,14 +55,14 @@ export class GameEntry extends kunpo.CocosEntry {
 
     /** 2. 加载剩余资源 */
     private loadResources(): void {
-        let paths: kunpo.IAssetConfig[] = [
+        let paths: KunpoAssets.IAssetConfig[] = [
             { path: "prefab", type: cc.Prefab },
             { path: "config/buffer", type: cc.BufferAsset },
             // { path: "icon", type: cc.SpriteFrame },
             // { path: "texture/6101/spriteFrame", type: cc.SpriteFrame, isFile: true },
             // { path: "pet", type: cc.SpriteFrame, bundle: "bundle_res" },
         ];
-        let loader = new kunpo.AssetLoader("load");
+        let loader = new KunpoAssets.AssetLoader("load");
         loader.start({
             configs: paths,
             complete: () => {

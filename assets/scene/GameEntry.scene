@@ -1331,10 +1331,6 @@
       "__uuid__": "35d3b8e9-0096-4aa9-82a1-505784157bf8",
       "__expectedType__": "cc.JsonAsset"
     },
-    "ecConfig": {
-      "__uuid__": "74f73a17-1358-4937-8b5b-c36149e05152",
-      "__expectedType__": "cc.JsonAsset"
-    },
     "fps": 60,
     "root": {
       "__id__": 4

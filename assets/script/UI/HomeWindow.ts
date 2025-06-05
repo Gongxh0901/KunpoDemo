@@ -4,7 +4,7 @@
  * @Description: 
  */
 
-import { cc, fgui, kunpo } from "../header";
+import { cc, fgui, kunpo, KunpoAssets } from "../header";
 const { uiclass, uiprop, uiclick, uicontrol, uitransition } = kunpo._uidecorator;
 
 @uiclass("Window", "Home", "HomeWindow")
@@ -35,13 +35,6 @@ export class HomeWindow extends kunpo.Window {
     }
 
     @uiclick
-    private onClickBtnGame(): void {
-        // kunpo.log("获取版本号", KunpoSDK.SDKHelper.getInstance().getVersionCode());
-        // kunpo.log("获取build号", KunpoSDK.SDKHelper.getInstance().getBuildCode());
-        kunpo.WindowManager.showWindow("GameWindow");
-    }
-
-    @uiclick
     private onClickBtnCondition(): void {
         kunpo.WindowManager.showWindow("ConditionWindow");
     }
@@ -67,10 +60,10 @@ export class HomeWindow extends kunpo.Window {
 
     @uiclick
     private onClickLoadBuffer(): void {
-        let paths: kunpo.IAssetConfig[] = [
+        let paths: KunpoAssets.IAssetConfig[] = [
             { path: "config/buffer", type: cc.BufferAsset },
         ];
-        let loader = new kunpo.AssetLoader("load");
+        let loader = new KunpoAssets.AssetLoader("load");
         loader.start({
             configs: paths,
             complete: () => {
