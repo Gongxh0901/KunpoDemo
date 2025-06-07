@@ -4,14 +4,14 @@
  * @Description: 
  */
 
-import { kunpo } from "../header";
+import { GlobalEvent } from "kunpocc-event";
 
 export class SDKHelper {
     private static _manifestUrl: string = "";
     public static getSystemInfo(): Promise<{ version: string, build: number }> {
         return new Promise((resolve, reject) => {
             KunpoSDK.SDKHelper.getInstance().getSystemInfo();
-            kunpo.GlobalEvent.addOnce("calljs::getSystemInfo", (data: { version: string, build: number }) => {
+            GlobalEvent.addOnce("calljs::getSystemInfo", (data: { version: string, build: number }) => {
                 resolve(data);
             }, this);
         });

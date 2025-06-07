@@ -79,10 +79,6 @@ export class GameEntry extends kunpo.CocosEntry {
 
 
     private loadComplete(): void {
-        kunpo.GlobalEvent.add("event::111", () => {
-            kunpo.log("接收到事件");
-        }, this);
-
         kunpo.WindowManager.showWindow("HomeWindow", "这是一个测试窗口").then(() => {
             kunpo.log("窗口显示成功");
             this.root.active = false;

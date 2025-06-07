@@ -4,7 +4,7 @@
  * @Description: 准备一个数据类
  */
 
-import { kunpo } from "../header";
+import { GlobalEvent } from "kunpocc-event";
 
 export class DataHelper {
     private static _data: Map<string, any> = new Map();
@@ -19,6 +19,6 @@ export class DataHelper {
     public static setValue(key: string, value: any): void {
         this._data.set(key, value);
         /** 数据改变后发送事件 */
-        kunpo.GlobalEvent.send(key);
+        GlobalEvent.send(key);
     }
 }
