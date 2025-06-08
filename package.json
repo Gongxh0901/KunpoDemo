@@ -9,6 +9,7 @@
     "kunpocc": "^1.1.4",
     "kunpocc-assets": "^0.0.1",
     "kunpocc-event": "^0.0.2",
+    "kunpocc-net": "^0.0.2",
     "ts-node": "^10.9.2"
   }
 }

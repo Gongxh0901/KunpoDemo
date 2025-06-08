@@ -4,10 +4,10 @@
  * @Description: 网络基类
  */
 
-import { kunpo } from "../header";
+import { HttpTask, IHttpResponse } from "kunpocc-net";
 import { INetResponse } from "./header";
 
-export abstract class NetTaskBase extends kunpo.HttpTask {
+export abstract class NetTaskBase extends HttpTask {
     protected url: string = '';
     private _succeed: (data: any) => void;
     private _httpError: (data: any) => void;
@@ -26,11 +26,11 @@ export abstract class NetTaskBase extends kunpo.HttpTask {
         this._taskError = res?.taskError;
     }
 
-    public onComplete(response: kunpo.IHttpResponse): void {
+    public onComplete(response: IHttpResponse): void {
         try {
             let data = response.data as INetResponse;
             if (data.responseStatus == 0) {
-                kunpo.log(`http response\n   name:${this.name}\n   url=${this.url}\n   data=${JSON.stringify(data)}`);
+                console.log(`http response\n   name:${this.name}\n   url=${this.url}\n   data=${JSON.stringify(data)}`);
                 this.onTaskComplete(data);
                 this._succeed?.(data);
             } else {
@@ -38,16 +38,16 @@ export abstract class NetTaskBase extends kunpo.HttpTask {
             }
         } catch (error) {
             let data = response.data as INetResponse;
-            kunpo.log(`http response task error\n   name:${this.name}\n   url:${this.url}\n   responseStatus:${data.responseStatus}\n   data:${JSON.stringify(data)}`);
+            console.log(`http response task error\n   name:${this.name}\n   url:${this.url}\n   responseStatus:${data.responseStatus}\n   data:${JSON.stringify(data)}`);
             this.onTaskError(data.responseStatus, response.data);
             this._taskError?.(response.data);
         }
     }
 
-    public onError(response: kunpo.IHttpResponse): void {
+    public onError(response: IHttpResponse): void {
         let message = response.message;
         let statusCode = response.statusCode;
-        kunpo.log(`http response error\n   name:${this.name}\n   url:${this.url}\n   message:${message}\n   statusCode:${statusCode}`);
+        console.log(`http response error\n   name:${this.name}\n   url:${this.url}\n   message:${message}\n   statusCode:${statusCode}`);
         this.onHttpError(message);
         this._httpError?.(response.data);
     }

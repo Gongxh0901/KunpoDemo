@@ -3,6 +3,7 @@
  * @Date: 2025-03-29
  * @Description: 
  */
+import { Socket } from "kunpocc-net";
 import { fgui, kunpo } from "../../header";
 import { ProtoInfos } from "../../Socket/ProtoInfos";
 const { uiclass, uiprop, uiclick } = kunpo._uidecorator;
@@ -13,7 +14,7 @@ export class SocketTestWindow extends kunpo.Window {
     @uiprop private text_input_message: fgui.GTextInput;
 
     private _status: fgui.Controller;
-    private socket: kunpo.Socket;
+    private socket: Socket;
     protected onInit(): void {
         this.adapterType = kunpo.AdapterType.Bang;
         this.type = kunpo.WindowType.Normal;
@@ -34,7 +35,7 @@ export class SocketTestWindow extends kunpo.Window {
             kunpo.WindowManager.showWindowIm("ToastWindow", { text: "已经存在一个连接" });
             return;
         }
-        this.socket = new kunpo.Socket(this.text_input.text, { binaryType: "arraybuffer" });
+        this.socket = new Socket(this.text_input.text, { binaryType: "arraybuffer" });
         this.socket.onopen = () => {
             kunpo.log("连接成功");
             kunpo.WindowManager.showWindowIm("ToastWindow", { text: "连接成功" });

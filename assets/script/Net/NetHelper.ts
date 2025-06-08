@@ -3,6 +3,7 @@
  * @Date: 2024-05-20
  * @Description: 
  */
+import { HttpManager, IHttpEvent } from "kunpocc-net";
 import { kunpo } from "../header";
 import { ServerConfig } from "./header";
 
@@ -12,11 +13,11 @@ export class NetHelper {
     public static get appid(): string { return ServerConfig.appid };
     public static get secret(): string { return ServerConfig.secret };
 
-    public static send(url: string, data: any, netEvent: kunpo.IHttpEvent) {
+    public static send(url: string, data: any, netEvent: IHttpEvent) {
         netEvent.data = new Date().getTime();
         let sendData = JSON.stringify(data);
-        kunpo.log(`http request\n name:${netEvent.name}\n   url=${this.url + url}\n   data=${sendData}`);
-        kunpo.HttpManager.post(this.url + url, sendData, "json", netEvent, this.formatHeaders(netEvent.data, data), 5);
+        console.log(`http request\n name:${netEvent.name}\n   url=${this.url + url}\n   data=${sendData}`);
+        HttpManager.post(this.url + url, sendData, "json", netEvent, this.formatHeaders(netEvent.data, data), 5);
     }
 
     private static formatHeaders(time: number, data: any): any[] {
@@ -37,8 +38,6 @@ export class NetHelper {
         for (let key of keys) {
             signStr.push(`${key}=${signData[key]}&`);
         }
-        // kunpo.log("sign 未md5加密 :" + signStr.join(""))
-        // kunpo.log("sign:" + kunpo.md5(signStr.join("")));
         return encodeURIComponent(kunpo.md5(signStr.join("")));
     }
 }

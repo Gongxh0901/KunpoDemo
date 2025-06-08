@@ -22,7 +22,7 @@ export interface IServerInfo {
 
 export const ServerConfig: IServerInfo = {
     name: "dev-gblnn",
-    url: "https://dev-gblnn.lanfeitech.com",
-    appid: "qEAb2ZhK",
-    secret: "e7b439c886b4ce15fb809b14d69ed0e2",
+    url: "",
+    appid: "",
+    secret: "",
 }
