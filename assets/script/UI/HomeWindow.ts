@@ -4,6 +4,7 @@
  * @Description: 
  */
 
+import { AssetPool } from "kunpocc-assets";
 import { cc, fgui, kunpo, KunpoAssets } from "../header";
 const { uiclass, uiprop, uiclick, uicontrol, uitransition } = kunpo._uidecorator;
 
@@ -69,13 +70,13 @@ export class HomeWindow extends kunpo.Window {
             complete: () => {
                 kunpo.log("加载成功");
 
-                let basic = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/basic");
+                let basic = AssetPool.get<cc.BufferAsset>("config/buffer/basic");
                 kunpo.log("basic", JSON.stringify(kunpo.Binary.toJson(basic.buffer())));
 
-                let dict = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/dict");
+                let dict = AssetPool.get<cc.BufferAsset>("config/buffer/dict");
                 kunpo.log("dict", JSON.stringify(kunpo.Binary.toJson(dict.buffer())));
 
-                let listDict = kunpo.AssetPool.get<cc.BufferAsset>("config/buffer/list_dict");
+                let listDict = AssetPool.get<cc.BufferAsset>("config/buffer/list_dict");
                 kunpo.log("list_dict", JSON.stringify(kunpo.Binary.toJson(listDict.buffer())));
 
                 let aaa = {
